@@ -16,63 +16,89 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/ala-site/img/icon.png">
 <link rel="apple-touch-icon" href="/ala-site/img/icon.png">
+<link rel="preload" href="/ala-site/img/pacifico.ttf" as="font" type="font/ttf" crossorigin>
 <style>
-:root{--red:#EF3340;--red-d:#C81E2B;--ink:#2B2A28;--mute:#66615B;--paper:#F7F5F2;--line:#E6E1DB;--card:#fff}
+@font-face{font-family:Pacifico;src:url(/ala-site/img/pacifico.ttf) format("truetype");font-display:swap}
+:root{--red:#EF3340;--red-d:#C81E2B;--blush:#FFE9EB;--blue:#4556AC;--ink:#2B2A28;--mute:#66615B;--paper:#F7F5F2;--line:#E6E1DB;--card:#fff;--display:Pacifico,"Brush Script MT",cursive}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",sans-serif}
 a{color:var(--red-d)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{background:#fff;border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-header img{height:34px;width:auto;display:block}
-nav a{color:var(--ink);text-decoration:none;margin-left:18px;font-size:15px}
-nav a:hover{color:var(--red)}
-.hero{padding-top:44px;padding-bottom:28px}
-.eyebrow{color:var(--red);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
-h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 14px;letter-spacing:-.01em}
-h2{font-size:22px;margin:36px 0 12px}
-.lede{font-size:18px;color:var(--mute);max-width:640px;margin:0}
+header{background:#fff;position:sticky;top:0;z-index:5;box-shadow:0 .5px 0 var(--line)}
+header .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;height:64px}
+header .logo img{height:34px;width:auto;display:block}
+header .side{font-size:15px;overflow:hidden;white-space:nowrap}
+header .side a{color:var(--ink);text-decoration:none;margin-right:18px}
+header .side a:hover{color:var(--red)}
+header .end{justify-self:end}
+header .end a{color:var(--red);font-weight:700;text-decoration:none;font-size:14px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 20px 4px;max-width:1040px;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap}
+.chips a:hover{border-color:var(--red)}
+.chips a.on{background:var(--red);border-color:var(--red);color:#fff}
+.hero{padding-top:20px;padding-bottom:8px}
+.eyebrow{color:var(--red);font-weight:700;font-size:13px;letter-spacing:.02em;margin:0 0 6px}
+h1{font-family:var(--display);font-weight:400;color:var(--red);font-size:clamp(28px,6vw,40px);line-height:1.25;margin:0 0 10px}
+h2{font-family:var(--display);font-weight:400;color:var(--red);font-size:26px;line-height:1.2;margin:34px 0 14px}
+.lede{font-size:16px;color:var(--mute);max-width:620px;margin:0;line-height:1.5}
 .copy{max-width:680px}
 .copy p{margin:0 0 14px}
-.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:12px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:17px;letter-spacing:.4px;padding:0 28px;border-radius:12px;margin-top:16px}
 .btn:hover{background:var(--red-d)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:8px 0 0;padding:0;list-style:none}
-.grid li{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.grid img{display:block;width:100%;height:auto;background:#eee}
-.grid span{display:block;font-size:13px;color:var(--mute);padding:8px 10px;line-height:1.3}
-.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:0;padding:0;list-style:none}
-.tiles a{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:var(--ink);height:100%}
-.tiles a:hover{border-color:var(--red)}
-.tiles b{display:block;font-size:17px;margin-bottom:4px}
-.tiles small{color:var(--mute);font-size:14px;line-height:1.4;display:block}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;counter-reset:s;margin:0;padding:0;list-style:none}
-.steps li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 18px 18px 56px;position:relative}
-.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;font-weight:700;text-align:center;line-height:26px;font-size:14px}
-.kiosks{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
-.kiosks li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
-.kiosks b{display:block}
-.kiosks small{display:block;color:var(--mute);font-size:14px;line-height:1.4;margin:4px 0 8px}
-.kiosks a{font-size:14px;margin-right:12px}
-.facts{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;max-width:680px}
+.banner{display:block;text-decoration:none;margin:14px 0 2px}
+.banner .pic{border-radius:18px;overflow:hidden;aspect-ratio:2/1;background:#F1EDE8}
+.banner img{display:block;width:100%;height:100%;object-fit:cover}
+.banner .act{display:block;margin-top:8px;color:var(--red);font-weight:700;font-size:14px}
+.fan{position:relative;border-radius:18px;aspect-ratio:2/1;background:linear-gradient(135deg,#FFE9EB,#FFF6F0);overflow:hidden}
+.fan img{position:absolute;bottom:-6%;width:30%;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.fan img:nth-child(1){left:12%;transform:rotate(-9deg)}
+.fan img:nth-child(2){left:35%;bottom:4%;z-index:1}
+.fan img:nth-child(3){left:58%;transform:rotate(9deg)}
+.soon{display:none;align-items:center;gap:10px;background:var(--blush);border-radius:12px;padding:12px 14px;margin:14px 0 0;text-decoration:none;color:var(--ink);font-size:14px}
+.soon b{font-weight:700}
+.soon span{flex:1}
+.soon em{font-style:normal;color:var(--red);font-weight:700;font-size:13px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 14px;margin:0;padding:0;list-style:none}
+@media (min-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}}
+@media (min-width:900px){.hero.home{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center;padding-top:28px}.hero.home .banner{margin-top:0}}
+.grid .pic{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 14px rgba(0,0,0,.10);aspect-ratio:.7}
+.grid img{display:block;width:100%;height:100%;object-fit:cover}
+.grid span{display:block;font-size:13px;color:var(--ink);margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 16px 16px 54px;position:relative;font-size:15px;line-height:1.45}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:15px;width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;font-weight:700;text-align:center;line-height:26px;font-size:14px}
+.kiosks{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.kiosks li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.kiosks b{display:block;font-size:15px}
+.kiosks small{display:block;color:var(--mute);font-size:14px;line-height:1.4;margin:2px 0 8px}
+.kiosks a{font-size:14px;font-weight:700;color:var(--red);text-decoration:none;margin-right:14px}
+.facts{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;max-width:680px;font-size:15px}
 .facts p{margin:0 0 8px}
+.facts a{font-weight:700;color:var(--red);text-decoration:none}
 .note{color:var(--mute);font-size:14px}
-footer{margin-top:56px;border-top:1px solid var(--line);background:#fff;padding:24px 0 32px;font-size:14px;color:var(--mute)}
-footer a{color:var(--mute);margin-right:16px;display:inline-block;margin-bottom:6px}
-@media (max-width:560px){nav a.opt{display:none}.hero{padding-top:28px;padding-bottom:18px}}
+footer{margin-top:56px;background:#fff;box-shadow:0 -.5px 0 var(--line);padding:24px 0 32px;font-size:14px;color:var(--mute)}
+footer a{color:var(--mute);margin-right:16px;display:inline-block;margin-bottom:6px;text-decoration:none}
+footer a:hover{color:var(--red)}
+footer .sign{font-family:var(--display);color:var(--red);font-size:20px;margin:0 0 10px}
+@media (max-width:640px){header .side{visibility:hidden}.btn{display:flex;width:100%}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Personalised birthday cards with their photo", "description": "Birthday cards with their photo and your words, printed in about five minutes at an Ala kiosk. Over 500 designs, no minimum order.", "url": "https://www.alacard.io/birthday-cards/", "isPartOf": {"@type": "WebSite", "name": "Ala", "url": "https://www.alacard.io/"}}</script>
 
 </head>
 <body>
 <header><div class="wrap">
-<a href="/ala-site/" aria-label="Ala home"><img src="/ala-site/img/ala.png" alt="Ala" width="113" height="34"></a>
-<nav><a class="opt" href="/ala-site/diwali-cards/">Diwali</a><a class="opt" href="/ala-site/birthday-cards/">Birthday</a><a href="/ala-site/kiosks/">Find a kiosk</a></nav>
+<nav class="side"><a href="/ala-site/diwali-cards/">Diwali</a><a href="/ala-site/birthday-cards/">Birthday</a></nav>
+<a class="logo" href="/ala-site/" aria-label="Ala home"><img src="/ala-site/img/ala.png" alt="Ala" width="113" height="34"></a>
+<div class="end"><a href="/ala-site/kiosks/">Find a kiosk</a></div>
 </div></header>
-<main><section class="hero wrap"><p class="eyebrow">Birthday cards</p><h1>Personalised birthday cards with their photo</h1><div class="copy"><p>More than a third of every card Ala has ever printed was for a birthday. It is the card people come back for, because it is the one that gets kept.</p><p>Choose from hundreds of birthday designs, for a mother, a husband, a best friend, a two-year-old or a fortieth. Drop in a photo from your phone, write the line only you would write, and it prints on real card stock in about five minutes at an Ala kiosk inside a gift shop.</p><p>Forgot until the morning of? That is fine. Five minutes is enough. Find your nearest kiosk below, or start the card now.</p><p>A few ideas: their baby photo on their thirtieth, a photo from your first trip together, or the whole class on one card for a child&#x27;s birthday. The kiosk has designs for every age, from first birthdays to sixtieths.</p></div><a class="btn" href="/ala-site/kiosks/">Find a kiosk near you</a></section><section class="wrap"><h2>Some of our birthday designs</h2><ul class="grid"><li><img src="/ala-site/img/08be8ffa6e5a6922.webp" alt="Happy Birthday - Limited Edition" width="360" height="504" loading="lazy" decoding="async"><span>Happy Birthday - Limited Edition</span></li><li><img src="/ala-site/img/a734683e684ae88d.webp" alt="Happy Birthday - Certified Iconic" width="360" height="504" loading="lazy" decoding="async"><span>Happy Birthday - Certified Iconic</span></li><li><img src="/ala-site/img/ad64745fcaa88051.webp" alt="LAP AROUND THE SUN" width="360" height="504" loading="lazy" decoding="async"><span>LAP AROUND THE SUN</span></li><li><img src="/ala-site/img/8d91127af0081467.webp" alt="Kids Birthday - Soccer" width="360" height="504" loading="lazy" decoding="async"><span>Kids Birthday - Soccer</span></li><li><img src="/ala-site/img/bf45bc614dd73be6.webp" alt="Happy Birthday - Groovey" width="360" height="504" loading="lazy" decoding="async"><span>Happy Birthday - Groovey</span></li><li><img src="/ala-site/img/0e82b8ddc3129fd2.webp" alt="Happy Birthday - Golden Era" width="360" height="504" loading="lazy" decoding="async"><span>Happy Birthday - Golden Era</span></li><li><img src="/ala-site/img/9a56b0dc655918ad.webp" alt="Kids Birthday - Basketball" width="360" height="504" loading="lazy" decoding="async"><span>Kids Birthday - Basketball</span></li><li><img src="/ala-site/img/051fddb8a4daa21f.webp" alt="Birthday Pass" width="360" height="504" loading="lazy" decoding="async"><span>Birthday Pass</span></li><li><img src="/ala-site/img/75679d4ba952067b.webp" alt="Happy Birthday My Dear Grand Daughter" width="360" height="504" loading="lazy" decoding="async"><span>Happy Birthday My Dear Grand Daughter</span></li><li><img src="/ala-site/img/e05627ed55d09449.webp" alt="Happy Birthday - Purple" width="360" height="504" loading="lazy" decoding="async"><span>Happy Birthday - Purple</span></li><li><img src="/ala-site/img/b0c9fbf85c4b7bbe.webp" alt="Happy Birthday Friend" width="360" height="506" loading="lazy" decoding="async"><span>Happy Birthday Friend</span></li><li><img src="/ala-site/img/a22bea1a9876ce13.webp" alt="Happy Birthday - Wife" width="360" height="504" loading="lazy" decoding="async"><span>Happy Birthday - Wife</span></li></ul></section><section class="wrap"><h2>Find your nearest Ala kiosk</h2><ul class="kiosks"><li><b>Archies, Vasant Vihar</b><small>New Delhi</small><a href="/ala-site/kiosks/archies-vasant-vihar/">Details</a><a href="https://www.google.com/maps/search/?api=1&query=28.5651,77.1613" rel="noopener">Map</a></li><li><b>Archies, MGF Metropolitan Mall</b><small>Gurugram</small><a href="/ala-site/kiosks/archies-mgf-gurugram/">Details</a><a href="https://www.google.com/maps/search/?api=1&query=28.48,77.0817" rel="noopener">Map</a></li><li><b>Archies, Santacruz West</b><small>Mumbai</small><a href="/ala-site/kiosks/archies-santacruz-mumbai/">Details</a><a href="https://www.google.com/maps/search/?api=1&query=19.0844,72.8373" rel="noopener">Map</a></li><li><b>Balloons Unlimited, Civil Lines</b><small>Prayagraj</small><a href="/ala-site/kiosks/balloons-unlimited-prayagraj/">Details</a><a href="https://www.google.com/maps/search/?api=1&query=25.4523,81.833" rel="noopener">Map</a></li></ul><p class="note">More shops are joining. <a href="/ala-site/kiosks/">See all Ala kiosks</a>.</p></section></main>
+<nav class="chips" aria-label="Occasions"><a href="/ala-site/">All</a><a href="/ala-site/diwali-cards/">Diwali</a><a href="/ala-site/birthday-cards/" class=on>Birthday</a><a href="/ala-site/anniversary-cards/">Anniversary &amp; love</a><a href="/ala-site/karva-chauth-cards/">Karva Chauth</a><a href="/ala-site/bhai-dooj-cards/">Bhai Dooj</a><a href="/ala-site/kiosks/">Kiosks</a></nav>
+<main><section class="hero wrap"><p class="eyebrow">Birthday cards</p><h1>Personalised birthday cards with their photo</h1><div class="copy"><p>More than a third of every card Ala has ever printed was for a birthday. It is the card people come back for, because it is the one that gets kept.</p><p>Choose from hundreds of birthday designs, for a mother, a husband, a best friend, a two-year-old or a fortieth. Drop in a photo from your phone, write the line only you would write, and it prints on real card stock in about five minutes at an Ala kiosk inside a gift shop.</p><p>Forgot until the morning of? That is fine. Five minutes is enough. Find your nearest kiosk below, or start the card now.</p><p>A few ideas: their baby photo on their thirtieth, a photo from your first trip together, or the whole class on one card for a child&#x27;s birthday. The kiosk has designs for every age, from first birthdays to sixtieths.</p></div><a class="btn" href="/ala-site/kiosks/">Find a kiosk near you</a></section><section class="wrap"><h2>Some of our birthday designs</h2><ul class="grid"><li><div class="pic"><img src="/ala-site/img/08be8ffa6e5a6922.webp" alt="Happy Birthday - Limited Edition" width="360" height="504" loading="lazy" decoding="async"></div><span>Happy Birthday - Limited Edition</span></li><li><div class="pic"><img src="/ala-site/img/a734683e684ae88d.webp" alt="Happy Birthday - Certified Iconic" width="360" height="504" loading="lazy" decoding="async"></div><span>Happy Birthday - Certified Iconic</span></li><li><div class="pic"><img src="/ala-site/img/ad64745fcaa88051.webp" alt="LAP AROUND THE SUN" width="360" height="504" loading="lazy" decoding="async"></div><span>LAP AROUND THE SUN</span></li><li><div class="pic"><img src="/ala-site/img/8d91127af0081467.webp" alt="Kids Birthday - Soccer" width="360" height="504" loading="lazy" decoding="async"></div><span>Kids Birthday - Soccer</span></li><li><div class="pic"><img src="/ala-site/img/bf45bc614dd73be6.webp" alt="Happy Birthday - Groovey" width="360" height="504" loading="lazy" decoding="async"></div><span>Happy Birthday - Groovey</span></li><li><div class="pic"><img src="/ala-site/img/0e82b8ddc3129fd2.webp" alt="Happy Birthday - Golden Era" width="360" height="504" loading="lazy" decoding="async"></div><span>Happy Birthday - Golden Era</span></li><li><div class="pic"><img src="/ala-site/img/9a56b0dc655918ad.webp" alt="Kids Birthday - Basketball" width="360" height="504" loading="lazy" decoding="async"></div><span>Kids Birthday - Basketball</span></li><li><div class="pic"><img src="/ala-site/img/051fddb8a4daa21f.webp" alt="Birthday Pass" width="360" height="504" loading="lazy" decoding="async"></div><span>Birthday Pass</span></li><li><div class="pic"><img src="/ala-site/img/75679d4ba952067b.webp" alt="Happy Birthday My Dear Grand Daughter" width="360" height="504" loading="lazy" decoding="async"></div><span>Happy Birthday My Dear Grand Daughter</span></li><li><div class="pic"><img src="/ala-site/img/e05627ed55d09449.webp" alt="Happy Birthday - Purple" width="360" height="504" loading="lazy" decoding="async"></div><span>Happy Birthday - Purple</span></li><li><div class="pic"><img src="/ala-site/img/b0c9fbf85c4b7bbe.webp" alt="Happy Birthday Friend" width="360" height="506" loading="lazy" decoding="async"></div><span>Happy Birthday Friend</span></li><li><div class="pic"><img src="/ala-site/img/a22bea1a9876ce13.webp" alt="Happy Birthday - Wife" width="360" height="504" loading="lazy" decoding="async"></div><span>Happy Birthday - Wife</span></li></ul></section><section class="wrap"><h2>Find your nearest Ala kiosk</h2><ul class="kiosks"><li><b>Archies, Vasant Vihar</b><small>New Delhi</small><a href="/ala-site/kiosks/archies-vasant-vihar/">Details</a><a href="https://www.google.com/maps/search/?api=1&query=28.5651,77.1613" rel="noopener">Map</a></li><li><b>Archies, MGF Metropolitan Mall</b><small>Gurugram</small><a href="/ala-site/kiosks/archies-mgf-gurugram/">Details</a><a href="https://www.google.com/maps/search/?api=1&query=28.48,77.0817" rel="noopener">Map</a></li><li><b>Archies, Santacruz West</b><small>Mumbai</small><a href="/ala-site/kiosks/archies-santacruz-mumbai/">Details</a><a href="https://www.google.com/maps/search/?api=1&query=19.0844,72.8373" rel="noopener">Map</a></li><li><b>Balloons Unlimited, Civil Lines</b><small>Prayagraj</small><a href="/ala-site/kiosks/balloons-unlimited-prayagraj/">Details</a><a href="https://www.google.com/maps/search/?api=1&query=25.4523,81.833" rel="noopener">Map</a></li></ul><p class="note">More shops are joining. <a href="/ala-site/kiosks/">See all Ala kiosks</a>.</p></section></main>
 <footer><div class="wrap">
 <p><a href="/ala-site/diwali-cards/">Diwali cards</a><a href="/ala-site/birthday-cards/">Birthday cards</a><a href="/ala-site/anniversary-cards/">Anniversary cards</a><a href="/ala-site/karva-chauth-cards/">Karva Chauth cards</a><a href="/ala-site/bhai-dooj-cards/">Bhai Dooj cards</a><a href="/ala-site/kiosks/">Ala kiosks</a></p>
 <p><a href="https://www.alacard.io/about-us">About us</a><a href="https://www.alacard.io/contact-us">Contact</a><a href="https://www.alacard.io/privacy">Privacy</a><a href="https://www.alacard.io/terms-and-conditions">Terms</a><a href="https://www.alacard.io/refunds-policy">Refunds</a><a href="https://www.alacard.io/disclaimer">Disclaimer</a></p>
+<p class="sign">Make it yours</p>
 <p>&copy; 2026 Sparkin Labs &middot; Ala, personalised cards printed at a kiosk near you.</p>
 </div></footer>
 </body>
