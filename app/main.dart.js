@@ -54274,7 +54274,7 @@ return new A.rF(s.c,null,this.b,s.d,null,null)},
 $S:163}
 A.aF0.prototype={
 $1(a){var s=null,r=A.U(this.a.gUR(),s,s,s,s,s,s,s,s)
-return A.i6(A.c([A.bx(B.hX,new A.aEZ(a),s),A.bx(B.MX,new A.aF_(a),s)],t.p),r,B.aP5)},
+return A.i6(A.c([A.bx(B.hX,new A.aEZ(a),s),A.bx(B.MX,new A.aF_(a),s)],t.p),r,B.aP7)},
 $S:25}
 A.aEZ.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -54518,7 +54518,7 @@ q=A.c([],i)
 for(h=0;h<3;++h){g=B.xy[h]
 q.push(new A.a67(g,g===f.ga2d(),new A.aEW(f,g),e))}c=A.c([c,r,m,o,l,k,j,p,B.azy,A.jQ(B.bJ,q,B.cS,0,8),B.bG],i)
 if(f.a.c!=null){s=f.ga_w()
-c.push(new A.a_v(s,f.ga_y()?e:new A.aEX(f),B.q,B.aNt,B.cZ,e))}c.push(B.d7)
+c.push(new A.a_v(s,f.ga_y()?e:new A.aEX(f),B.q,B.aNs,B.cZ,e))}c.push(B.d7)
 c.push(A.dF(B.MR,e,f.ga6O()&&!f.cx?f.gaDD():e))
 return A.fp(b,e,A.lB(A.aP(c,B.a7,B.l,B.p),B.vZ,B.N),e)}}
 A.aEY.prototype={
@@ -55264,7 +55264,7 @@ $0(){return A.ay(this.a,!1).bB()},
 $S:0}
 A.a4e.prototype={
 F(a){var s,r,q=this,p=null,o=t.p,n=A.c([A.bP(A.c([B.Vz,B.M4,A.U("\u20b9"+B.d.au(q.c.d),p,p,p,p,B.aII,p,p,p)],o),B.eU,p,B.l,B.p,0,B.D)],o)
-if($.i5().a)B.b.R(n,A.c([B.d7,A.HE(B.Xk,B.aNr,new A.aKy(q,a),p),B.ev,B.aOY],o))
+if($.i5().a)B.b.R(n,A.c([B.d7,A.HE(B.Xk,B.aNq,new A.aKy(q,a),p),B.ev,B.aOZ],o))
 n.push(B.cq)
 o=q.d
 if(o)s=new A.aKz(q,a)
@@ -55388,10 +55388,10 @@ q=A.b0(6)
 p=l.a
 q=A.cV(A.c5(k,A.zd(k,B.eJ,k,k,A.Ru(p.e,900),k,k,k),B.bV,k,k,new A.bK(k,k,k,q,B.a2K,k,B.X),k,k,k,k,k,k,150),k,k)
 p=p.c
-o=A.c9(A.HE(B.Xt,B.aOd,new A.aJw(a),k),1,k)
+o=A.c9(A.HE(B.Xt,B.aOf,new A.aJw(a),k),1,k)
 n=l.d
 m=t.p
-return A.Y0(!1,A.fp(r,k,A.lB(A.aP(A.c([B.WX,B.cq,B.aNg,B.c2,B.aNk,B.e0,q,B.M7,new A.a9d(s,p.d,k),B.cq,A.bP(A.c([o,B.mQ,A.c9(n==null?A.HE(B.Xo,B.aOm,l.gaCQ(),k):A.HE(B.Xv,A.U("Reminder set \xb7 "+A.bbq(n),k,k,k,k,k,k,k,k),k,k),1,k)],m),B.t,k,B.l,B.p,0,k),B.cq,A.dF(B.aNi,k,new A.aJx(l,a)),B.cp,A.bx(B.aN8,new A.aJy(a),k)],m),B.am,B.l,B.p),B.V0,B.N),k),k,t.z)}}
+return A.Y0(!1,A.fp(r,k,A.lB(A.aP(A.c([B.WX,B.cq,B.aNg,B.c2,B.aNk,B.e0,q,B.M7,new A.a9d(s,p.d,k),B.cq,A.bP(A.c([o,B.mQ,A.c9(n==null?A.HE(B.Xo,B.aOo,l.gaCQ(),k):A.HE(B.Xv,A.U("Reminder set \xb7 "+A.bbq(n),k,k,k,k,k,k,k,k),k,k),1,k)],m),B.t,k,B.l,B.p,0,k),B.cq,A.dF(B.aNi,k,new A.aJx(l,a)),B.cp,A.bx(B.aN8,new A.aJy(a),k)],m),B.am,B.l,B.p),B.V0,B.N),k),k,t.z)}}
 A.aJp.prototype={
 $0(){return this.a.d=this.b},
 $S:0}
@@ -56029,10 +56029,10 @@ s=3
 return A.m(A.ay(o,!1).dZ(A.fY(new A.aR4(p),!1,null,t.H)),$async$G0)
 case 3:case 1:return A.t(q,r)}})
 return A.u($async$G0,r)},
-F(a){var s,r,q,p,o=this,n=null,m=o.r.a===4,l=A.e8(n,n,B.dl,n,n,new A.aRB(a),n,n,n,n),k=t.p,j=A.c([A.bx(B.aOy,m?o.gaCa():n,n),B.jE],k),i=o.w
+F(a){var s,r,q,p,o=this,n=null,m=o.r.a===4,l=A.e8(n,n,B.dl,n,n,new A.aRB(a),n,n,n,n),k=t.p,j=A.c([A.bx(B.aOA,m?o.gaCa():n,n),B.jE],k),i=o.w
 l=A.fO(j,n,n,!0,!0,n,new A.I7(new A.a9w(i,o.gara(),n),B.aGq,n),1,n,n,n,!1,n,!1,n,n,l,n,!0,n,n,n,n,n,B.aNM,n,n,n,1,n,!0)
 j=o.Q
-if(j!=null)k=A.cV(A.aP(A.c([A.U(j,n,n,n,n,B.n_,n,n,n),B.c2,B.aOu,B.et,A.dF(B.MV,n,new A.aRC(o))],k),B.t,B.l,B.O),n,n)
+if(j!=null)k=A.cV(A.aP(A.c([A.U(j,n,n,n,n,B.n_,n,n,n),B.c2,B.aOw,B.et,A.dF(B.MV,n,new A.aRC(o))],k),B.t,B.l,B.O),n,n)
 else if(!m){j=A.b0(8)
 k=A.aP(A.c([B.YR,A.c9(new A.a2(B.V6,A.cV(A.zX(A.c5(n,new A.md(0.7142857142857143,A.zd(n,B.eJ,n,n,A.Ru(o.a.c.c,1200),n,n,n),n),B.bV,n,n,new A.bK(B.j,n,n,j,B.xl,n,B.X),n,n,n,n,n,n,n),0.55),n,n),n),1,n),B.azC],k),B.t,B.l,B.p)}else{j=i===B.i8
 s=j?12:28
@@ -56223,7 +56223,7 @@ $1(a){var s=null,r=this.a,q=this.b.length
 q=A.U(r===1?"Keep 1 of your "+q+" photos?":"Keep "+r+" of your "+q+" photos?",s,s,s,s,s,s,s,s)
 r=""+r
 r=A.U("This layout has room for "+r+". The first "+r+" stay; the others come off the page.",s,s,s,s,s,s,s,s)
-return A.i6(A.c([A.bx(B.aOg,new A.aQZ(a),s),A.bx(B.aNv,new A.aR_(a),s)],t.p),r,q)},
+return A.i6(A.c([A.bx(B.aOi,new A.aQZ(a),s),A.bx(B.aNu,new A.aR_(a),s)],t.p),r,q)},
 $S:25}
 A.aQZ.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -56242,7 +56242,7 @@ $1(a){return a.f==null},
 $S:97}
 A.aQA.prototype={
 $1(a){var s=null,r=A.U("A page takes up to 12. Remove one to add another.",s,s,s,s,s,s,s,s)
-return A.i6(A.c([A.bx(B.MS,new A.aQy(a),s)],t.p),r,B.aPn)},
+return A.i6(A.c([A.bx(B.MS,new A.aQy(a),s)],t.p),r,B.aPo)},
 $S:25}
 A.aQy.prototype={
 $0(){return A.ay(this.a,!1).bB()},
@@ -56545,7 +56545,7 @@ k=A.c([],m)
 for(s=0;s<4;++s){h=B.Z4[s]
 j=g.e
 if(j===$){i=g.a.d
-j=g.e=i==null?f:i.b}k.push(p.$3("\u20b9"+h,j===h,new A.aLb(g,h)))}d=A.c([B.aPd,B.ev,B.aOE,n,d,B.azF,l,A.jQ(B.bJ,k,B.cS,0,8),q.$1("Mobile number of the person getting the gift")],m)
+j=g.e=i==null?f:i.b}k.push(p.$3("\u20b9"+h,j===h,new A.aLb(g,h)))}d=A.c([B.aPe,B.ev,B.aOG,n,d,B.azF,l,A.jQ(B.bJ,k,B.cS,0,8),q.$1("Mobile number of the person getting the gift")],m)
 if(g.x.length!==0){n=A.rr(f,f,f,f,f,f,f,f,f,f,f,f,f,B.aA,f,f,f,f,f,f,f)
 m=g.y
 d.push(new A.em(B.db,f,f,A.b2Q(B.pr,A.U(m==null?"Pick from People":"For "+m+" \xb7 change",f,f,f,f,B.cC,f,f,f),g.gat7(),n),f))}n=g.gzI()
@@ -56658,7 +56658,7 @@ this.ah()},
 F(a){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e=null,d=this.d,c=d==null?e:A.iQ(d.b,t.CC)
 if(c==null)c=B.a31
 s=new A.aLo()
-d=A.fO(e,e,e,!0,!0,e,e,1,e,e,e,!1,e,!1,e,e,A.e8(e,e,B.dl,e,e,new A.aLm(a),e,e,e,e),e,!0,e,e,e,e,e,B.aOt,e,e,e,1,e,!0)
+d=A.fO(e,e,e,!0,!0,e,e,1,e,e,e,!1,e,!1,e,e,A.e8(e,e,B.dl,e,e,new A.aLm(a),e,e,e,e),e,!0,e,e,e,e,e,B.aOv,e,e,e,1,e,!0)
 r=A.c([s.$1("Gifts you sent")],t.p)
 q=c.length
 if(q===0)r.push(B.azq)
@@ -56714,7 +56714,7 @@ a4(){return new A.a4k()}}
 A.a4k.prototype={
 F(a){var s,r,q,p,o,n,m,l,k,j=null,i=this.a.c,h=B.c.al(i.e)
 if(h.length===0)h="someone special"
-s=A.fO(j,j,j,!0,!0,j,j,1,j,j,j,!1,j,!1,j,j,A.e8(j,j,B.iE,j,j,new A.aL_(a),j,j,j,j),j,!0,j,j,j,j,j,B.aPl,j,j,j,1,j,!0)
+s=A.fO(j,j,j,!0,!0,j,j,1,j,j,j,!1,j,!1,j,j,A.e8(j,j,B.iE,j,j,new A.aL_(a),j,j,j,j),j,!0,j,j,j,j,j,B.aPm,j,j,j,1,j,!0)
 r=A.b0(10)
 q=i.d
 r=A.c5(j,A.U(q.length===0?"This is only a preview of what they will see.":"This is only a preview of what "+q+" will see.",j,j,j,j,B.bI,B.a9,j,j),B.o,j,j,new A.bK(B.uI,j,j,r,j,j,B.X),j,j,j,B.oC,j,j,j)
@@ -56725,7 +56725,7 @@ n=A.U(i.a,j,j,j,j,B.e4,j,j,j)
 m=A.U("\u20b9"+i.b,j,j,j,j,B.aJa,j,j,j)
 l=A.qR(j,j,j,j,j,j,j,j,j,j,j,B.mP,j,j,j,j,j,j,j,j)
 k=t.p
-p=A.c5(j,A.aP(A.c([n,B.ev,m,B.fy,A.zZ(A.U(this.d?"SAMPLE-CODE-1234":"Show my code",j,j,j,j,B.aJQ,j,j,j),new A.aL0(this),l),B.c2,B.aOT],k),B.t,B.l,B.p),B.o,j,j,new A.bK(B.j,j,o,p,j,j,B.X),j,j,j,B.b_,j,j,j)
+p=A.c5(j,A.aP(A.c([n,B.ev,m,B.fy,A.zZ(A.U(this.d?"SAMPLE-CODE-1234":"Show my code",j,j,j,j,B.aJQ,j,j,j),new A.aL0(this),l),B.c2,B.aOU],k),B.t,B.l,B.p),B.o,j,j,new A.bK(B.j,j,o,p,j,j,B.X),j,j,j,B.b_,j,j,j)
 o=A.qR(j,j,j,j,j,j,j,j,j,j,j,B.mP,j,j,j,j,j,j,j,j)
 return A.fp(s,j,A.dR(A.c([r,B.eu,B.Xa,B.d7,q,B.eu,p,B.e0,A.zZ(A.U("Say thank you to "+h+" \u2014 make a card",j,j,j,j,B.bI,j,j,j),j,o),B.d7,A.dF(B.aPq,j,new A.aL1(a))],k),j,B.V_,j,B.N,!1),j)}}
 A.aL_.prototype={
@@ -56957,7 +56957,7 @@ if(!A.jZ(p.toLowerCase(),n,0)){q=r.c
 q=A.jZ(q,n,0)}}}}if(q)m.push(r)}}B.b.dV(m,new A.aMX(o,new A.aMZ(),new A.aMY(o.Po())))
 return m},
 F(a){var s,r,q,p,o,n,m,l,k,j,i,h,g=this,f=null,e=g.r,d=g.gaEM(),c=A.ay(a,!1).Rx()?A.e8(f,f,B.dl,f,f,new A.aN1(a),f,f,f,f):f
-c=A.fO(f,f,f,!0,!0,f,new A.I7(g.at&&g.r!=null?B.YS:B.dA,B.aGo,f),1,f,f,f,!1,f,!1,f,f,c,f,!0,f,f,f,f,f,B.aOW,f,f,f,1,f,!0)
+c=A.fO(f,f,f,!0,!0,f,new A.I7(g.at&&g.r!=null?B.YS:B.dA,B.aGo,f),1,f,f,f,!1,f,!1,f,f,c,f,!0,f,f,f,f,f,B.aOX,f,f,f,1,f,!0)
 s=g.aE5()
 r=g.w!=null
 if(g.x)q="Finding you\u2026"
@@ -57138,7 +57138,7 @@ F(a){var s=this,r=null,q=s.c,p=q.x,o=A.U(q.a,r,r,r,r,B.MJ,r,r,r),n=A.U(q.b,r,r,r
 if(p!=null&&A.Ds(q,l).b!==B.mK&&A.Ds(q,l).b!==B.mJ)j.push(A.U(A.beq(p,l),r,r,r,r,B.n0,r,r,r))
 l=s.d
 if(l!=null)j.push(A.U("\xb7 "+A.bcY(l)+" away",r,r,r,r,B.n0,r,r,r))
-return A.eY(!0,new A.a2(B.V3,A.aP(A.c([o,B.bG,n,B.ev,m,B.fy,A.jQ(B.bJ,j,B.nc,4,8),B.eu,A.HE(B.X8,B.aOV,s.f,A.qR(r,r,r,r,r,r,r,r,r,B.a0,r,B.M1,r,r,new A.dd(A.b0(12),B.C),B.bT,r,r,B.ML,r))],k),B.a7,B.l,B.O),r),!1,B.aA,!0)}}
+return A.eY(!0,new A.a2(B.V3,A.aP(A.c([o,B.bG,n,B.ev,m,B.fy,A.jQ(B.bJ,j,B.nc,4,8),B.eu,A.HE(B.X8,B.aOW,s.f,A.qR(r,r,r,r,r,r,r,r,r,B.a0,r,B.M1,r,r,new A.dd(A.b0(12),B.C),B.bT,r,r,B.ML,r))],k),B.a7,B.l,B.O),r),!1,B.aA,!0)}}
 A.a6a.prototype={
 F(a){var s=null,r=new A.aS1(),q=A.b0(12),p=A.je(B.ay,1)
 return new A.a2(B.h9,A.c5(s,A.aP(A.c([r.$2(160,14),B.bG,r.$2(240,11),B.cp,r.$2(110,20)],t.p),B.a7,B.l,B.p),B.o,s,s,new A.bK(B.j,s,p,q,s,s,B.X),s,s,s,B.ha,s,s,s),s)}}
@@ -57324,7 +57324,7 @@ A.aA2.prototype={}
 A.AM.prototype={
 L(){return"ShopState."+this.b}}
 A.adG.prototype={
-$1(a){return A.i6(A.c([A.bx(B.hX,new A.adE(a),null),A.bx(B.aNY,new A.adF(a),null)],t.p),B.aN9,B.aOS)},
+$1(a){return A.i6(A.c([A.bx(B.hX,new A.adE(a),null),A.bx(B.aNY,new A.adF(a),null)],t.p),B.aN9,B.aOT)},
 $S:25}
 A.adE.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -57396,11 +57396,11 @@ n=A.fV(n,m?B.q:B.Z,j,j)
 l=k.a.c[o]
 m=o===k.d&&p?B.aa:B.G
 n=A.c([n,B.dz,new A.kf(1,B.dk,A.U(l.b,j,j,j,j,new A.w(!0,j,j,j,j,j,17,m,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j,j),j,j,j),j)],q)
-if(s.m(0,o))n.push(B.aPo)
+if(s.m(0,o))n.push(B.aPp)
 g.push(A.di(!1,j,!0,new A.a2(B.TW,A.bP(n,B.t,j,B.l,B.p,0,j),j),j,!0,j,j,j,j,j,j,j,j,j,new A.aFJ(k,o),j,j,j,j,j,j,j))}g.push(B.cq)
 if(p)B.b.R(g,A.c([A.FO(B.wX,A.U("ASK "+k.a.c[k.d].a.toUpperCase()+" ON WHATSAPP",j,j,j,j,j,j,j,j),new A.aFK(k),j),A.bx(B.aNX,k.gan5(),j)],q))
 else{r=A.c([],q)
-if(s.a!==0)r.push(A.zZ(B.aNZ,k.ganu(),A.qR(j,j,j,j,j,j,j,j,j,j,j,B.mP,j,j,j,j,j,j,j,j)))
+if(s.a!==0)r.push(A.zZ(B.aO_,k.ganu(),A.qR(j,j,j,j,j,j,j,j,j,j,j,B.mP,j,j,j,j,j,j,j,j)))
 r.push(B.bG)
 r.push(A.dF(B.n2,j,new A.aFL(a)))
 B.b.R(g,r)}if(p)g.push(A.bx(B.MU,new A.aFM(a),j))
@@ -57921,7 +57921,7 @@ if(b!=null)r.push(new A.a2(B.vT,A.U(b,s,s,s,s,B.aL6,s,s,s),s))
 return new A.a2(B.UU,A.aP(r,B.a7,B.l,B.p),s)},
 PG(a){return this.Ad(a,null)},
 aHp(){var s,r,q,p,o,n,m,l,k=this,j=null,i="Pick people",h=k.gfG()
-if(h.length===0&&k.at.length===0)return A.dR(A.c([k.PG("Who should get this card?"),B.bG,new A.BQ(B.lf,"A group","Family, Friends, Office, or one you made",k.gZT(),j),new A.BQ(B.Wy,i,"Tick names from your People",k.ga3i(),j),new A.BQ(B.po,"From my phone contacts","For someone not in People yet",k.ga4D(),j),new A.a2(B.UO,A.b2Q(B.X6,B.aOw,k.ga6K(),j),j)],t.p),j,B.vP,j,B.N,!1)
+if(h.length===0&&k.at.length===0)return A.dR(A.c([k.PG("Who should get this card?"),B.bG,new A.BQ(B.lf,"A group","Family, Friends, Office, or one you made",k.gZT(),j),new A.BQ(B.Wy,i,"Tick names from your People",k.ga3i(),j),new A.BQ(B.po,"From my phone contacts","For someone not in People yet",k.ga4D(),j),new A.a2(B.UO,A.b2Q(B.X6,B.aOy,k.ga6K(),j),j)],t.p),j,B.vP,j,B.N,!1)
 s=new A.a9(h,new A.aVH(),A.Y(h).h("a9<1>")).gE(0)
 if(h.length===0)r="No one on the list yet."
 else if(s===0)r="Everyone has an address."
@@ -57944,14 +57944,14 @@ q=B.c.al(s.b)
 p=k.ga5a()
 o=A.b98(r,"Dear "+q+",",p.a,j,p.b)
 p=t.p
-return A.aP(A.c([A.c9(A.dR(A.c([k.PG("Write each person's name on their card?"),new A.a2(B.b_,k.aok(o),j),A.cV(A.U(s.a+"'s card",j,j,j,j,B.dD,j,j,j),j,j)],p),j,j,j,B.N,!1),1,j),A.eY(!0,A.aP(A.c([A.dF(B.aOX,j,new A.aVf(k)),B.cp,A.zZ(B.aNL,new A.aVg(k),A.qR(j,j,j,j,j,j,j,j,j,j,j,B.rL,j,j,j,j,j,j,j,j))],p),B.am,B.l,B.O),!1,B.hc,!0)],p),B.t,B.l,B.p)}r=t.p
+return A.aP(A.c([A.c9(A.dR(A.c([k.PG("Write each person's name on their card?"),new A.a2(B.b_,k.aok(o),j),A.cV(A.U(s.a+"'s card",j,j,j,j,B.dD,j,j,j),j,j)],p),j,j,j,B.N,!1),1,j),A.eY(!0,A.aP(A.c([A.dF(B.aOY,j,new A.aVf(k)),B.cp,A.zZ(B.aNL,new A.aVg(k),A.qR(j,j,j,j,j,j,j,j,j,j,j,B.rL,j,j,j,j,j,j,j,j))],p),B.am,B.l,B.O),!1,B.hc,!0)],p),B.t,B.l,B.p)}r=t.p
 q=A.c([k.Ad("Check the names","Press a name to change it to what you call them.")],r)
 for(n=0;p=k.gfG(),n<p.length;++n){p=p[n]
 m=p.b
 l=A.U("Dear "+B.c.al(m)+",",j,j,j,j,B.aLU,j,j,j)
 p=p.a
 p=m===p?j:A.U(p,j,j,j,j,B.jL,j,j,j)
-q.push(A.mI(!1,B.oG,j,j,!0,j,j,j,!0,j,j,j,58,j,j,new A.aVh(k,n),!1,j,j,j,p,j,l,j,B.Xl,j))}return A.aP(A.c([A.c9(A.dR(q,j,B.ix,j,B.N,!1),1,j),A.eY(!0,A.aP(A.c([A.dF(B.aOK,j,new A.aVi(k))],r),B.am,B.l,B.O),!1,B.hc,!0)],r),B.t,B.l,B.p)},
+q.push(A.mI(!1,B.oG,j,j,!0,j,j,j,!0,j,j,j,58,j,j,new A.aVh(k,n),!1,j,j,j,p,j,l,j,B.Xl,j))}return A.aP(A.c([A.c9(A.dR(q,j,B.ix,j,B.N,!1),1,j),A.eY(!0,A.aP(A.c([A.dF(B.aOM,j,new A.aVi(k))],r),B.am,B.l,B.O),!1,B.hc,!0)],r),B.t,B.l,B.p)},
 aES(){var s,r,q,p=this,o=null,n=p.gaEQ(),m=p.w,l=p.x&&m!=null&&!B.b.m(n,m),k=new A.aVz(),j=p.Ad("How should it be signed?","This goes at the bottom of every card."),i=p.gfG(),h=t.p
 i=A.c([j,new A.a2(B.UP,p.MW(p.a3_(i.length===0?o:B.b.ga0(i)),240),o)],h)
 for(j=n.length,s=0;s<n.length;n.length===j||(0,A.B)(n),++s){r=n[s]
@@ -58016,12 +58016,12 @@ if(j!=null&&n>0){r=j.a
 e.push(new A.a2(B.kS,A.U("Send "+(r-n)+" more and each card is \u20b9"+A.b16(m,r),c,c,c,c,B.bP,c,c,c),c))}e.push(B.azk)
 r=""+h
 s=A.c([s.$2("Have an address",""+i),s.$2("Still need an address",r)],f)
-if(h>0)B.b.R(s,A.c([B.bG,B.aOl,B.d7,A.FO(B.wX,A.U(h===1?"ASK THEM ON WHATSAPP":"ASK THE "+r+" ON WHATSAPP",c,c,c,c,c,c,c,c),d.gans(),c),A.bx(B.aOb,d.gaEC(),c)],f))
+if(h>0)B.b.R(s,A.c([B.bG,B.aOn,B.d7,A.FO(B.wX,A.U(h===1?"ASK THEM ON WHATSAPP":"ASK THE "+r+" ON WHATSAPP",c,c,c,c,c,c,c,c),d.gans(),c),A.bx(B.aOd,d.gaEC(),c)],f))
 if(b.length!==0){r=new A.af(b,new A.aVt(),t.lp).b2(0,", ")
 b=b.length===1
 p=b?"has":"have"
 b=b?"their card is":"their cards are"
-s.push(new A.a2(B.kT,A.U(r+" "+p+" no number and no address, so "+b+' not counted. Go back to step 1 and press "Type their address".',c,c,c,c,B.ME,c,c,c),c))}return A.aP(A.c([A.c9(A.dR(A.c([g,new A.BR(e,B.j,c),new A.BR(s,B.j,c),B.aRr],f),c,B.vO,c,B.N,!1),1,c),A.eY(!0,A.aP(A.c([A.dF(B.aO9,c,new A.aVu(d))],f),B.am,B.l,B.O),!1,B.hc,!0)],f),B.t,B.l,B.p)}}
+s.push(new A.a2(B.kT,A.U(r+" "+p+" no number and no address, so "+b+' not counted. Go back to step 1 and press "Type their address".',c,c,c,c,B.ME,c,c,c),c))}return A.aP(A.c([A.c9(A.dR(A.c([g,new A.BR(e,B.j,c),new A.BR(s,B.j,c),B.aRr],f),c,B.vO,c,B.N,!1),1,c),A.eY(!0,A.aP(A.c([A.dF(B.aOb,c,new A.aVu(d))],f),B.am,B.l,B.O),!1,B.hc,!0)],f),B.t,B.l,B.p)}}
 A.aVR.prototype={
 $1(a){var s=this.a
 if(s.c!=null)s.I(new A.aVQ(s,a))},
@@ -58063,7 +58063,7 @@ return new A.xb(this.b,n,null,null)},
 $S:515}
 A.aVF.prototype={
 $1(a){var s=null,r=A.U(this.a.gld(),s,s,s,s,s,s,s,s)
-return A.i6(A.c([A.bx(B.MS,new A.aVE(a),s)],t.p),r,B.aPk)},
+return A.i6(A.c([A.bx(B.MS,new A.aVE(a),s)],t.p),r,B.aPl)},
 $S:25}
 A.aVE.prototype={
 $0(){return A.ay(this.a,!1).bB()},
@@ -58072,7 +58072,7 @@ A.aVG.prototype={
 $1(a){var s,r=null,q=this.a.a.length
 q=A.U(q===1?"Found 1 person":"Found "+q+" people",r,r,r,r,r,r,r,r)
 s=A.U('Save them in People too, as a group called "'+this.b+'"? Then they are ready for the next card.',r,r,r,r,r,r,r,r)
-return A.i6(A.c([A.bx(B.aNA,new A.aVC(a),r),A.bx(B.aNK,new A.aVD(a),r)],t.p),s,q)},
+return A.i6(A.c([A.bx(B.aNz,new A.aVC(a),r),A.bx(B.aNK,new A.aVD(a),r)],t.p),s,q)},
 $S:25}
 A.aVC.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -58116,7 +58116,7 @@ s.x=!0},
 $S:0}
 A.aVO.prototype={
 $1(a){var s=null,r=this.a,q=A.fr(s,B.aB,!0,s,!0,B.x,s,A.fL(),r,s,s,s,s,s,2,B.Y6,B.M,!0,s,!0,s,!1,s,B.aS,s,s,s,s,s,s,s,s,1,s,s,!1,"\u2022",s,s,s,s,s,!1,s,s,!1,s,!0,s,B.b_,s,s,s,s,s,s,s,s,s,s,s,s,!0,B.ad,s,B.dB,s,s,s,s)
-return A.i6(A.c([A.bx(B.hX,new A.aVM(a),s),A.bx(B.aNC,new A.aVN(a,r),s)],t.p),q,B.aPa)},
+return A.i6(A.c([A.bx(B.hX,new A.aVM(a),s),A.bx(B.aNB,new A.aVN(a,r),s)],t.p),q,B.aPc)},
 $S:25}
 A.aVM.prototype={
 $0(){return A.ay(this.a,!1).bB()},
@@ -58127,7 +58127,7 @@ $S:0}
 A.aVl.prototype={
 $1(a){var s=null,r=this.a.gfG().length
 r=A.U(r===1?"The person you chose will not be kept.":"The "+r+" people you chose will not be kept.",s,s,s,s,s,s,s,s)
-return A.i6(A.c([A.bx(B.aND,new A.aVj(a),s),A.bx(B.aNV,new A.aVk(a),s)],t.p),r,B.aOJ)},
+return A.i6(A.c([A.bx(B.aNC,new A.aVj(a),s),A.bx(B.aNV,new A.aVk(a),s)],t.p),r,B.aOL)},
 $S:25}
 A.aVj.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -58244,7 +58244,7 @@ s=A.U(o,q,q,q,q,B.n1,q,q,q)
 r=t.p
 s=A.c([s,A.U(p.d==null?n+" \xb7 No address yet":n+" \xb7 Address saved",q,q,q,q,B.bP,q,q,q)],r)
 p=this.e
-if(p!=null)s.push(A.bx(B.aOC,p,A.rr(B.db,q,q,q,q,q,q,q,q,q,q,B.aFY,q,B.aA,q,q,q,q,q,q,q)))
+if(p!=null)s.push(A.bx(B.aOE,p,A.rr(B.db,q,q,q,q,q,q,q,q,q,q,B.aFY,q,B.aA,q,q,q,q,q,q,q)))
 return new A.a2(B.UX,A.bP(A.c([A.c9(A.aP(s,B.a7,B.l,B.p),1,q),A.e8(q,q,B.iE,26,q,this.d,q,q,"Take "+o+" off",q)],r),B.a7,q,B.l,B.p,0,q),q)}}
 A.BR.prototype={
 F(a){var s=null,r=A.b0(14),q=A.je(B.ay,1)
@@ -58300,8 +58300,8 @@ case 1:return A.t(q,r)
 case 2:return A.r(o.at(-1),r)}})
 return A.u($async$zB,r)},
 F(a){var s,r,q,p,o,n=this,m=null,l=n.e,k=B.c.al(l.a.a),j=n.a.c.gjy(),i=A.Y(j).h("a9<1>"),h=i.h("a9<y.E>"),g=A.a4(new A.a9(new A.a9(j,new A.aPL(n),i),new A.aPM(k.toLowerCase()),h),h.h("y.E"))
-k=A.fO(m,m,m,!0,!0,m,m,1,m,m,m,!1,m,!1,m,m,A.e8(m,m,B.iE,m,m,new A.aPN(a),m,m,"Close",m),m,!0,m,m,m,m,m,B.aOj,m,m,m,1,m,!0)
-l=A.c([new A.a2(B.w0,A.fr(m,B.aB,!1,m,!0,B.x,m,A.fL(),l,m,m,m,m,m,2,B.Y8,B.M,!0,m,!0,m,!1,m,B.aS,m,m,m,m,m,m,m,m,1,m,m,!1,"\u2022",m,new A.aPO(n),m,m,m,!1,m,m,!1,m,!0,m,B.b_,m,m,m,m,m,m,m,m,m,m,m,m,!0,B.ad,m,B.cs,m,m,m,m),m),A.mI(!1,m,m,m,!0,m,m,m,!0,m,B.X3,m,56,m,m,n.gase(),!1,m,m,m,m,m,B.aPg,m,m,m)],t.p)
+k=A.fO(m,m,m,!0,!0,m,m,1,m,m,m,!1,m,!1,m,m,A.e8(m,m,B.iE,m,m,new A.aPN(a),m,m,"Close",m),m,!0,m,m,m,m,m,B.aOl,m,m,m,1,m,!0)
+l=A.c([new A.a2(B.w0,A.fr(m,B.aB,!1,m,!0,B.x,m,A.fL(),l,m,m,m,m,m,2,B.Y8,B.M,!0,m,!0,m,!1,m,B.aS,m,m,m,m,m,m,m,m,1,m,m,!1,"\u2022",m,new A.aPO(n),m,m,m,!1,m,m,!1,m,!0,m,B.b_,m,m,m,m,m,m,m,m,m,m,m,m,!0,B.ad,m,B.cs,m,m,m,m),m),A.mI(!1,m,m,m,!0,m,m,m,!0,m,B.X3,m,56,m,m,n.gase(),!1,m,m,m,m,m,B.aPh,m,m,m)],t.p)
 if(g.length===0)l.push(B.azr)
 for(j=g.length,i=n.d,h=t.s,s=0;s<g.length;g.length===j||(0,A.B)(g),++s){r=g[s]
 q=i.m(0,r.a)
@@ -58465,7 +58465,7 @@ o=p.c
 if(o==null){s=1
 break}o=o.ae(t.Pu).f
 o.qE()
-o.ie(B.aGR)
+o.ie(B.aGQ)
 case 1:return A.t(q,r)}})
 return A.u($async$nQ,r)},
 wi(){var s=0,r=A.v(t.H),q,p=this,o
@@ -58487,7 +58487,7 @@ F(a){var s,r,q,p=this,o=null,n=p.gQW()
 if(p.ga1G()!=n)$.ag.p3$.push(new A.aNZ(p))
 s=p.d
 r=s!=null&&s.x===n?s:o
-q=A.fO(o,o,o,!0,!0,o,o,1,o,o,o,!1,o,!1,o,o,o,o,!0,o,o,o,o,o,B.aNw,o,o,o,1,o,!0)
+q=A.fO(o,o,o,!0,!0,o,o,1,o,o,o,!1,o,!1,o,o,o,o,!0,o,o,o,o,o,B.aNv,o,o,o,1,o,!0)
 return A.fp(q,o,r==null?p.a2A(B.r3,n!=null):new A.kn(new A.aO_(p,r),o,r,o),o)},
 a2A(a,b){var s,r,q,p,o,n=this,m=null
 if(b){s=A.bF(n.a.c.a.a.i(0,"phone_number"))
@@ -58506,8 +58506,8 @@ B.b.R(q,A.c([new A.nn(B.Wq,"Email",r,new A.aNN(n),m),new A.nn(B.iD,"My addresses
 if(r.a)q.push(new A.nn(B.wM,"See a card alive","Point at the printed test card; diyas, petals and a moon come out of it.",new A.aNP(n),m))
 if(r.a)q.push(new A.nn(B.lb,"Gifts & rewards","Gifts you put in cards, and what you win at a kiosk.",new A.aNQ(n),m))
 q.push(new A.nn(B.wL,"Find a kiosk","Shops near you with an Ala kiosk, open or closed right now.",n.gaz_(),m))
-q.push(new A.nn(B.Wo,"Privacy policy","What reaches Alacard, and what stays on your phone.",new A.aNR(n),m))
-if(b)B.b.R(q,A.c([new A.nn(B.Wm,"Delete my account","Closes your account and wipes it from this phone.",n.gaqd(),m),B.et,A.bx(B.aNQ,n.gaER(),m)],p))
+q.push(new A.nn(B.Wo,"Privacy policy","What reaches Alacard, and what stays in your browser.",new A.aNR(n),m))
+if(b)B.b.R(q,A.c([new A.nn(B.Wm,"Delete my account","Closes your account and wipes it from this browser.",n.gaqd(),m),B.et,A.bx(B.aNQ,n.gaER(),m)],p))
 q.push(B.e0)
 q.push(A.cV(A.fD(B.ar,B.azo,B.M,!1,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,n.gas5(),m,m,m,m,m,m,!1,B.bi),m,m))
 return A.dR(q,m,B.Uv,m,B.N,!1)},
@@ -58549,7 +58549,7 @@ A.aNI.prototype={
 $1(a){return new A.wQ(this.a.a.d,this.b,null)},
 $S:478}
 A.aNX.prototype={
-$1(a){return A.i6(A.c([A.bx(B.hX,new A.aNV(a),null),A.bx(B.aOB,new A.aNW(a),null)],t.p),B.aOP,B.aPi)},
+$1(a){return A.i6(A.c([A.bx(B.hX,new A.aNV(a),null),A.bx(B.aOD,new A.aNW(a),null)],t.p),B.aOQ,B.aPj)},
 $S:25}
 A.aNV.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -58728,7 +58728,7 @@ break
 case 6:case 1:return A.t(q,r)
 case 2:return A.r(o.at(-1),r)}})
 return A.u($async$zq,r)},
-F(a){var s,r,q,p=this,o=null,n=A.bG(a,B.dH,t.w).w,m=t.p,l=A.c([B.aNE,B.cp,B.aPc,B.mS],m)
+F(a){var s,r,q,p=this,o=null,n=A.bG(a,B.dH,t.w).w,m=t.p,l=A.c([B.aND,B.cp,B.aNZ,B.mS],m)
 if(p.e){s=A.U("Enter the code we sent to +91 "+p.a.d,o,o,o,o,B.dD,o,o,o)
 r=A.c([$.b0A(),new A.qE(6,o)],t.VS)
 B.b.R(l,A.c([s,B.bG,A.fr(o,B.xT,!0,o,!0,B.x,o,A.fL(),p.d,o,o,o,o,o,2,A.mC(o,new A.dt(4,A.b0(12),B.nS),o,o,o,o,o,o,!0,o,o,o,o,o,o,B.j,!0,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,!0,!0,!1,o,o,o,o,o,o,o,o,o,o,o,o,o,o),B.M,!0,o,!0,o,!1,o,B.aS,o,o,r,o,B.rY,o,o,o,1,o,o,!1,"\u2022",o,o,o,new A.aJ8(p),o,!1,o,o,!1,o,!0,o,B.b_,o,o,o,o,o,o,o,o,o,o,o,B.MG,!0,B.a9,o,B.cs,o,o,o,o)],m))}q=p.r
@@ -58742,7 +58742,7 @@ if(m)m=B.aGw
 else m=A.U(p.e?"Delete my account":"Send me a code",o,o,o,o,o,o,o,o)
 l.push(A.dF(m,o,s))
 l.push(B.c2)
-l.push(A.bx(B.aOF,p.f?o:new A.aJ9(a),o))
+l.push(A.bx(B.aOH,p.f?o:new A.aJ9(a),o))
 return A.lB(A.aP(l,B.am,B.l,B.p),new A.S(24,4,24,28+n.f.d),B.N)}}
 A.aJb.prototype={
 $0(){return this.a.I(new A.aJa())},
@@ -58951,7 +58951,7 @@ if(n.c==null){s=1
 break}n.I(new A.aOC(n,a))
 k=n.c.ae(t.Pu).f
 k.qE()
-k.ie(B.aGQ)
+k.ie(B.aGP)
 s=7
 break
 case 4:s=2
@@ -58960,7 +58960,7 @@ case 7:case 1:return A.t(q,r)
 case 2:return A.r(o.at(-1),r)}})
 return A.u($async$zk,r)},
 F(a){var s=null
-return A.fp(A.fO(s,s,s,!0,!1,s,s,1,s,s,s,!1,s,!1,s,s,this.a.e?s:A.e8(s,s,B.dl,s,s,new A.aOR(a),s,s,s,s),s,!0,s,s,s,s,s,B.aPm,s,s,s,1,s,!0),s,this.anE(),s)},
+return A.fp(A.fO(s,s,s,!0,!1,s,s,1,s,s,s,!1,s,!1,s,s,this.a.e?s:A.e8(s,s,B.dl,s,s,new A.aOR(a),s,s,s,s),s,!0,s,s,s,s,s,B.aPn,s,s,s,1,s,!0),s,this.anE(),s)},
 anE(){var s,r,q,p,o,n,m,l,k,j,i,h,g=this,f=null,e=g.f,d=e==null?f:A.iQ(e.c,t.HE)
 if(d==null)d=B.a33
 e=g.a.d.a.a
@@ -58971,12 +58971,12 @@ q=e===0
 if(q&&!s)return A.cV(new A.a2(B.Vc,g.a4V(),f),f,f)
 if(q&&r==null&&g.e==null)return B.uD
 if(q&&r!=null&&J.iA(r)){e=t.p
-q=A.c([B.aOs],e)
+q=A.c([B.aOu],e)
 p=g.a.w
-if(p!=null)B.b.R(q,A.c([B.e0,A.dF(B.aOU,f,p)],e))
+if(p!=null)B.b.R(q,A.c([B.e0,A.dF(B.aOV,f,p)],e))
 return A.b2r(A.dR(q,f,B.Va,f,B.N,!1),f,g.ga2D())}p=t.p
 o=A.c([],p)
-if(!q){q=g.a1E("Your designs","Kept on this phone. Press one to print it at a kiosk.")
+if(!q){q=g.a1E("Your designs","Kept in this browser. Press one to print it at a kiosk.")
 n=A.c([],p)
 for(m=0;m<e;++m){l=d[m]
 k=g.a2b(l,B.eJ)
@@ -58999,7 +58999,7 @@ break A}j="Waiting at the kiosk"
 break A}p.push(new A.PY(k,j,"Collect at any kiosk",new A.aOn(g,n),f))}e.push(g.a0Y(p))}}B.b.R(o,e)}else o.push(new A.f0(new A.a2(B.Vb,g.a4V(),f),f))
 o.push(B.M8)
 return A.b2r(A.b6K(f,B.ea,o),f,g.ga2D())},
-a4V(){return A.aP(A.c([B.aP4,B.et,A.dF(B.MW,null,this.gazm())],t.p),B.t,B.l,B.O)},
+a4V(){return A.aP(A.c([B.aP5,B.et,A.dF(B.MW,null,this.gazm())],t.p),B.t,B.l,B.O)},
 a2b(a,b){var s=this.w,r=a.a,q=s.i(0,r)
 if(q==null){q=this.f==null?null:A.a0p(r+"/thumb.png")
 if(q==null)q=A.dg(null,t.nc)
@@ -59040,7 +59040,7 @@ $0(){},
 $S:0}
 A.aOL.prototype={
 $1(a){var s=null,r=this.a,q=this.b
-return A.lB(A.aP(A.c([A.cb(r.a2b(q,B.nT),320,s),B.et,B.aON,B.c2,B.aOk,B.eu,A.dF(A.U("PRINT IT AT A KIOSK  \xb7  \u20b9"+B.d.au(q.b.d),s,s,s,s,s,s,s,s),s,new A.aOJ(r,a,q)),B.c2,A.bx(B.aP3,new A.aOK(r,a,q),s)],t.p),B.am,B.l,B.p),B.w3,B.N)},
+return A.lB(A.aP(A.c([A.cb(r.a2b(q,B.nT),320,s),B.et,B.aNG,B.c2,B.aOm,B.eu,A.dF(A.U("PRINT IT AT A KIOSK  \xb7  \u20b9"+B.d.au(q.b.d),s,s,s,s,s,s,s,s),s,new A.aOJ(r,a,q)),B.c2,A.bx(B.aP4,new A.aOK(r,a,q),s)],t.p),B.am,B.l,B.p),B.w3,B.N)},
 $S:245}
 A.aOJ.prototype={
 $0(){A.ay(this.b,!1).bB()
@@ -59051,7 +59051,7 @@ $0(){A.ay(this.b,!1).bB()
 this.a.zl(this.c)},
 $S:0}
 A.aOv.prototype={
-$1(a){return A.i6(A.c([A.bx(B.t2,new A.aOt(a),null),A.bx(B.t3,new A.aOu(a),null)],t.p),B.aNq,B.aOI)},
+$1(a){return A.i6(A.c([A.bx(B.t2,new A.aOt(a),null),A.bx(B.t3,new A.aOu(a),null)],t.p),B.aP6,B.aOK)},
 $S:25}
 A.aOt.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -59084,7 +59084,7 @@ return new A.qg(this.c.b,s,r.c,r.d,null)},
 $S:249}
 A.aOP.prototype={
 $1(a){var s=null,r=A.b0(12),q=this.b,p=q.c
-return A.lB(A.aP(A.c([A.EI(r,A.zd(new A.aOM(),B.nT,s,320,A.Ru(p.length===0?q.b:p,800),s,s,s)),B.et,B.aOn,B.c2,B.aNN,B.eu,A.dF(B.n2,s,new A.aON(a)),B.c2,A.bx(B.aOa,new A.aOO(this.a,a,q),s)],t.p),B.am,B.l,B.p),B.w3,B.N)},
+return A.lB(A.aP(A.c([A.EI(r,A.zd(new A.aOM(),B.nT,s,320,A.Ru(p.length===0?q.b:p,800),s,s,s)),B.et,B.aOp,B.c2,B.aNN,B.eu,A.dF(B.n2,s,new A.aON(a)),B.c2,A.bx(B.aOc,new A.aOO(this.a,a,q),s)],t.p),B.am,B.l,B.p),B.w3,B.N)},
 $S:245}
 A.aOM.prototype={
 $3(a,b,c){return B.aGy},
@@ -59097,7 +59097,7 @@ $0(){A.ay(this.b,!1).bB()
 this.a.zk(this.c)},
 $S:0}
 A.aOA.prototype={
-$1(a){return A.i6(A.c([A.bx(B.t2,new A.aOy(a),null),A.bx(B.t3,new A.aOz(a),null)],t.p),B.aOZ,B.aPb)},
+$1(a){return A.i6(A.c([A.bx(B.t2,new A.aOy(a),null),A.bx(B.t3,new A.aOz(a),null)],t.p),B.aP_,B.aPd)},
 $S:25}
 A.aOy.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -59722,7 +59722,7 @@ s=4
 break
 case 6:case 1:return A.t(q,r)}})
 return A.u($async$zx,r)},
-F(a){var s,r=this,q=null,p=r.d,o=r.e,n=A.fO(q,q,q,!0,!0,q,q,1,q,q,q,!1,q,!1,q,q,q,q,!0,q,q,q,q,q,B.aNz,q,q,q,1,q,!0),m=p!=null
+F(a){var s,r=this,q=null,p=r.d,o=r.e,n=A.fO(q,q,q,!0,!0,q,q,1,q,q,q,!1,q,!1,q,q,q,q,!0,q,q,q,q,q,B.aNy,q,q,q,1,q,!0),m=p!=null
 if(!m||o==null)s=B.aG
 else s=p.b.length===0?new A.a3M(r.gYR(),r.gYM(),q):r.aBq(p,o)
 if(!m||p.b.length===0)m=q
@@ -59790,7 +59790,7 @@ $0(){return this.a.f=B.c.al(this.b)},
 $S:0}
 A.aPY.prototype={
 $1(a){var s=null,r=A.U("Delete the group "+this.a+"?",s,s,s,s,s,s,s,s)
-return A.i6(A.c([A.bx(B.t2,new A.aPW(a),s),A.bx(B.MX,new A.aPX(a),s)],t.p),B.aP6,r)},
+return A.i6(A.c([A.bx(B.t2,new A.aPW(a),s),A.bx(B.MX,new A.aPX(a),s)],t.p),B.aP8,r)},
 $S:25}
 A.aPW.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -59840,7 +59840,7 @@ $0(){return this.a.rY(this.b)},
 $S:0}
 A.a3M.prototype={
 F(a){var s=null
-return A.cV(A.lB(A.aP(A.c([B.X9,B.cq,B.aO3,B.cp,B.aOR,B.e0,A.FO(B.x0,B.aOf,this.c,s),B.c2,A.bx(B.MT,this.d,s)],t.p),B.t,B.l,B.O),B.V9,B.N),s,s)}}
+return A.cV(A.lB(A.aP(A.c([B.X9,B.cq,B.aO5,B.cp,B.aOS,B.e0,A.FO(B.x0,B.aOh,this.c,s),B.c2,A.bx(B.MT,this.d,s)],t.p),B.t,B.l,B.O),B.V9,B.N),s,s)}}
 A.a65.prototype={
 F(a){var s,r,q=null,p=this.d,o=this.c,n=o.e==null,m=!n,l=t.p,k=A.c([A.U(o.b,q,1,B.aH,q,B.aLS,q,q,q)],l)
 if(o.d.length!==0)k.push(new A.a2(B.U_,A.U(o.grs(),q,q,q,q,B.bO,q,q,q),q))
@@ -59945,7 +59945,7 @@ this.ah()},
 F(a){var s,r=null,q=A.bG(a,B.dH,t.w).w,p=this.d,o=A.fr(r,B.aB,!0,r,!0,B.x,r,A.fL(),p,r,r,r,r,r,2,B.Y4,B.M,!0,r,!0,r,!1,r,B.aS,r,r,r,r,r,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,r,!1,r,!0,r,B.b_,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.ad,r,B.fA,r,r,r,r),n=A.fr(r,B.aB,!1,r,!0,B.x,r,A.fL(),this.e,r,r,r,r,r,2,B.Y9,B.M,!0,r,!0,r,!1,r,B.aS,r,r,r,r,B.fB,r,r,r,1,r,r,!1,"\u2022",r,r,r,r,r,!1,r,r,!1,r,!0,r,B.b_,r,r,r,r,r,r,r,r,r,r,r,r,!0,B.ad,r,B.cs,r,r,r,r)
 p=B.c.al(p.a.a).length===0
 s=p?r:new A.aOU(this,a)
-return new A.a2(new A.S(20,0,20,20+q.f.d),A.aP(A.c([B.aNF,B.fy,o,B.d7,n,B.eu,A.dF(A.U(p?"TYPE A NAME FIRST":"ADD",r,r,r,r,r,r,r,r),r,s),A.bx(B.MZ,new A.aOV(a),r)],t.p),B.am,B.l,B.O),r)}}
+return new A.a2(new A.S(20,0,20,20+q.f.d),A.aP(A.c([B.aNE,B.fy,o,B.d7,n,B.eu,A.dF(A.U(p?"TYPE A NAME FIRST":"ADD",r,r,r,r,r,r,r,r),r,s),A.bx(B.MZ,new A.aOV(a),r)],t.p),B.am,B.l,B.O),r)}}
 A.aOX.prototype={
 $0(){return this.a.I(new A.aOW())},
 $S:0}
@@ -60103,7 +60103,7 @@ n=A.cV(new A.Cm(a,72,c),c,c)
 m=A.U(a.b,c,c,c,c,B.aLy,B.a9,c,c)
 l=a.d.length===0
 k=A.U(l?"No mobile number":a.grs(),c,c,c,c,B.aLp,B.a9,c,c)
-j=A.bx(B.aO5,new A.aQp(d,a),c)
+j=A.bx(B.aO7,new A.aQp(d,a),c)
 i=t.p
 j=A.c([n,B.d7,m,new A.a2(B.kS,k,c),A.jQ(B.Nh,A.c([j,A.bx(A.U(l?"Add their number":"Change number",c,c,c,c,B.cC,c,c,c),new A.aQq(d,a),c)],i),B.cS,0,0),p.$1("ON THEIR CARDS"),new A.lY(B.wS,"Dear "+a.gjC()+",","Press to change what you call them",!1,new A.aQr(d,a),c),p.$1("DAYS TO REMEMBER")],i)
 for(n=s.length,h=0;h<s.length;s.length===n||(0,A.B)(s),++h){g=s[h]
@@ -60122,14 +60122,14 @@ b=A.c([],i)
 for(n=A.iQ(d.a.d.c,t.N),m=n.length,l=a.f,h=0;h<m;++h){e=n[h]
 b.push(new A.UC(A.U(e,c,c,c,c,c,c,c,c),B.b.m(l,e),new A.aQn(d,a,e),B.cv,B.q,c))}j.push(A.jQ(B.bJ,b,B.cS,8,8))
 j.push(B.aGz)
-j.push(A.bx(B.aPf,new A.aQo(d,a),c))
+j.push(A.bx(B.aPg,new A.aQo(d,a),c))
 return A.fp(o,c,A.dR(j,c,B.vY,c,B.N,!1),c)}}
 A.aQe.prototype={
 $0(){},
 $S:0}
 A.aQh.prototype={
 $1(a){var s=null,r=A.U("Remove "+this.a.b+"?",s,s,s,s,s,s,s,s)
-return A.i6(A.c([A.bx(B.aNc,new A.aQf(a),s),A.bx(B.t3,new A.aQg(a),s)],t.p),B.aOe,r)},
+return A.i6(A.c([A.bx(B.aNc,new A.aQf(a),s),A.bx(B.t3,new A.aQg(a),s)],t.p),B.aOg,r)},
 $S:25}
 A.aQf.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -60484,7 +60484,7 @@ case 5:s=4
 return A.m(m.dL(b,n),$async$vK)
 case 4:o=p.c
 if(o==null){s=1
-break}o.ae(t.Pu).f.ie(B.aGP)
+break}o.ae(t.Pu).f.ie(B.aGO)
 case 1:return A.t(q,r)}})
 return A.u($async$vK,r)},
 l(){var s=this.f
@@ -60506,7 +60506,7 @@ aCb(a){var s=new A.aS(new Float64Array(16))
 s.dn()
 this.f.sp(s)
 this.I(new A.aSE(this,a))},
-F(a){var s,r,q,p,o,n,m,l,k=this,j=null,i=A.fO(j,j,j,!0,!0,j,j,1,j,j,j,!1,j,!1,j,j,A.e8(j,j,B.dl,j,j,new A.aSG(a),j,j,j,j),j,!0,j,j,j,j,j,B.aNx,j,j,j,1,j,!0),h=A.c9(new A.a2(B.Vn,A.zy(new A.aSH(k)),j),1,j),g=t.p,f=A.c([],g)
+F(a){var s,r,q,p,o,n,m,l,k=this,j=null,i=A.fO(j,j,j,!0,!0,j,j,1,j,j,j,!1,j,!1,j,j,A.e8(j,j,B.dl,j,j,new A.aSG(a),j,j,j,j),j,!0,j,j,j,j,j,B.aNw,j,j,j,1,j,!0),h=A.c9(new A.a2(B.Vn,A.zy(new A.aSH(k)),j),1,j),g=t.p,f=A.c([],g)
 for(s=[B.aB2,B.aAX,B.aB3],r=0;r<3;++r){q={}
 p=s[r]
 q.a=null
@@ -60533,7 +60533,7 @@ g=p?new A.aSp(n,a):n.gat4()
 i.push(A.dF(A.U("LOOKS GOOD \u2014 GET IT  \xb7  \u20b9"+B.d.au(n.ga5I()),m,m,m,m,m,m,m,m),m,g))
 if(!p)i.push(new A.a2(B.TV,A.bP(A.c([B.wW,B.jF,A.c9(A.U(j.a+" \u20b9"+j.b+" gift inside, for the number ending "+j.gaNv()+". To change it, go back to the card.",m,m,m,m,B.hV,m,m,m),1,m)],r),B.t,m,B.l,B.p,0,m),m))
 if(p)i.push(A.bx(B.aNU,new A.aSq(n,a),m))
-if(l&&p)i.push(new A.a2(B.kS,A.HE(B.Xs,B.aNG,new A.aSr(n,a),A.qR(m,m,m,m,m,m,m,m,m,m,m,B.mP,m,m,m,B.u_,m,m,m,m)),m))
+if(l&&p)i.push(new A.a2(B.kS,A.HE(B.Xs,B.aNF,new A.aSr(n,a),A.qR(m,m,m,m,m,m,m,m,m,m,m,B.mP,m,m,m,B.u_,m,m,m,m)),m))
 return i},
 we(a){return this.aEg(a)},
 aEg(a){var s=0,r=A.v(t.H),q,p=this,o,n,m,l,k,j
@@ -60591,7 +60591,7 @@ break}d.bB()
 if(!m){e.ie(B.aGS)
 s=1
 break}d.K9(new A.aSx())
-e.ie(B.aGO)
+e.ie(B.aGR)
 case 1:return A.t(q,r)
 case 2:return A.r(o.at(-1),r)}})
 return A.u($async$vO,r)},
@@ -60653,7 +60653,7 @@ case 10:case 1:return A.t(q,r)
 case 2:return A.r(o.at(-1),r)}})
 return A.u($async$pZ,r)}}
 A.aSv.prototype={
-$1(a){return A.i6(A.c([A.bx(B.aO4,new A.aSt(a),null),A.bx(B.aOo,new A.aSu(a),null)],t.p),B.aNd,B.aNu)},
+$1(a){return A.i6(A.c([A.bx(B.aO6,new A.aSt(a),null),A.bx(B.aOq,new A.aSu(a),null)],t.p),B.aNd,B.aNt)},
 $S:25}
 A.aSt.prototype={
 $0(){return A.ay(this.a,!1).bY(!1)},
@@ -60741,7 +60741,7 @@ A.aSC.prototype={
 $1(a){return a.gn3()},
 $S:76}
 A.Ae.prototype={
-F(a){var s,r,q,p,o,n,m,l,k,j,i=null,h=B.c.mn(B.c.al("Effective 25 September 2026\n\nThis policy explains what the Ala app (\"Ala\") collects, why, and how to have it deleted. Ala is made by Alacard, which runs self-service card-printing kiosks in shops across India.\n\nWHAT WE COLLECT\nWhen you use Ala, these reach Alacard's servers:\n\u2022 Your mobile number \u2014 to sign you in with a one-time code, and to find your cards when you enter it at a kiosk.\n\u2022 Your account ID \u2014 a number Alacard gives your account.\n\u2022 The cards you save \u2014 including any photo you add and the words you write \u2014 so a kiosk can print them for you.\n\nWHAT STAYS ON YOUR PHONE\nThese are kept only on your phone and are never sent to Alacard:\n\u2022 Your name, email address and saved addresses, if you add them.\n\u2022 Your reminders (birthdays and other occasions).\n\u2022 Your location. If you allow it, Ala uses it only on your phone to sort the kiosk list nearest first. It is not sent anywhere or stored.\n\nHOW WE USE IT\nOnly to run the app: to sign you in, to save your cards and to print them at a kiosk. We do not use your data for advertising, we do not track you across other apps or websites, and we do not sell your data.\n\nWHO ELSE HANDLES IT\n\u2022 Amazon Web Services stores your saved cards and account on servers in India.\n\u2022 SMS and WhatsApp providers deliver your sign-in code.\nThey handle your data only to provide these services to us.\n\nHOW LONG WE KEEP IT\nA saved card stays until you collect it at a kiosk or remove it in the app (My cards). Your account stays until you delete it. Records of cards you have bought are kept for as long as Indian tax law requires.\n\nDELETING YOUR ACCOUNT\nIn the app: Me > Delete my account. We send a code to your number, and once you enter it your account is closed and the app removes your details from your phone. You can also email us at the address below and we will delete it for you.\nTo delete only some of your data, you can remove a saved card in My cards, a reminder in Reminders, or an address in Me > My addresses, at any time.\n\nYOUR RIGHTS\nUnder India's Digital Personal Data Protection Act, 2023, you can ask to see, correct or erase your personal data, and you can withdraw your consent at any time by deleting your account. Email us to do any of these.\n\nCHILDREN\nIf you are under 18, please use Ala with the consent of a parent or guardian.\n\nCHANGES\nIf this policy changes, we will update it here and change the date at the top.\n\nCONTACT\nAlacard \u2014 raghavjm@gmail.com\n"),A.b3("\\n\\s*\\n",!0,!1)),g=A.fO(i,i,i,!0,!0,i,i,1,i,i,i,!1,i,!1,i,i,i,i,!0,i,i,i,i,i,B.aOM,i,i,i,1,i,!0),f=t.p,e=A.c([],f)
+F(a){var s,r,q,p,o,n,m,l,k,j,i=null,h=B.c.mn(B.c.al("Effective 25 September 2026\n\nThis policy explains what the Ala app (\"Ala\") collects, why, and how to have it deleted. Ala is made by Alacard, which runs self-service card-printing kiosks in shops across India.\n\nWHAT WE COLLECT\nWhen you use Ala, these reach Alacard's servers:\n\u2022 Your mobile number \u2014 to sign you in with a one-time code, and to find your cards when you enter it at a kiosk.\n\u2022 Your account ID \u2014 a number Alacard gives your account.\n\u2022 The cards you save \u2014 including any photo you add and the words you write \u2014 so a kiosk can print them for you.\n\nWHAT STAYS ON YOUR PHONE\nThese are kept only on your phone and are never sent to Alacard:\n\u2022 Your name, email address and saved addresses, if you add them.\n\u2022 Your reminders (birthdays and other occasions).\n\u2022 Your location. If you allow it, Ala uses it only on your phone to sort the kiosk list nearest first. It is not sent anywhere or stored.\n\nHOW WE USE IT\nOnly to run the app: to sign you in, to save your cards and to print them at a kiosk. We do not use your data for advertising, we do not track you across other apps or websites, and we do not sell your data.\n\nWHO ELSE HANDLES IT\n\u2022 Amazon Web Services stores your saved cards and account on servers in India.\n\u2022 SMS and WhatsApp providers deliver your sign-in code.\nThey handle your data only to provide these services to us.\n\nHOW LONG WE KEEP IT\nA saved card stays until you collect it at a kiosk or remove it in the app (My cards). Your account stays until you delete it. Records of cards you have bought are kept for as long as Indian tax law requires.\n\nDELETING YOUR ACCOUNT\nIn the app: Me > Delete my account. We send a code to your number, and once you enter it your account is closed and the app removes your details from your phone. You can also email us at the address below and we will delete it for you.\nTo delete only some of your data, you can remove a saved card in My cards, a reminder in Reminders, or an address in Me > My addresses, at any time.\n\nYOUR RIGHTS\nUnder India's Digital Personal Data Protection Act, 2023, you can ask to see, correct or erase your personal data, and you can withdraw your consent at any time by deleting your account. Email us to do any of these.\n\nCHILDREN\nIf you are under 18, please use Ala with the consent of a parent or guardian.\n\nCHANGES\nIf this policy changes, we will update it here and change the date at the top.\n\nCONTACT\nAlacard \u2014 raghavjm@gmail.com\n"),A.b3("\\n\\s*\\n",!0,!1)),g=A.fO(i,i,i,!0,!0,i,i,1,i,i,i,!1,i,!1,i,i,i,i,!0,i,i,i,i,i,B.aOO,i,i,i,1,i,!0),f=t.p,e=A.c([],f)
 for(s=h.length,r=t.s,q=t.N,p=t.pl,o=0;o<h.length;h.length===s||(0,A.B)(h),++o){n=A.c(B.c.al(h[o]).split("\n"),r)
 m=B.b.ga0(n)
 l=m===m.toUpperCase()&&m.length>3
@@ -61060,7 +61060,7 @@ r=A.U("Removed "+a.b,q,q,q,q,q,q,q,q)
 s.ie(A.rm(A.b2H("Undo",new A.aTh(p,a)),q,q,q,q,B.x,q,r,q,B.bW,q,q,q,q,q,q,q,q,q,q))},
 F(a){var s=this,r=null,q=s.d,p=q==null,o=p||q.c.length===0,n=A.c([],t.p)
 if(!o)n.push(A.e8(r,r,B.Xu,r,r,s.ga3J(),r,r,"Add an occasion",r))
-n=A.fO(n,r,r,!0,!0,r,r,1,r,r,r,!1,r,!1,r,r,r,r,!0,r,r,r,r,r,B.aOp,r,r,r,1,r,!0)
+n=A.fO(n,r,r,!0,!0,r,r,1,r,r,r,!1,r,!1,r,r,r,r,!0,r,r,r,r,r,B.aOr,r,r,r,1,r,!0)
 if(p)p=B.aG
 else p=q.c.length===0?new A.a3N(s.ga3J(),r):s.aCS(q)
 return A.fp(n,r,p,r)},
@@ -61111,7 +61111,7 @@ A.aTf.prototype={
 $0(){return this.a.a3U(this.b)},
 $S:0}
 A.a3N.prototype={
-F(a){return A.cV(A.lB(A.aP(A.c([B.aO_,B.cq,B.aNy,B.M7,A.dF(B.aNh,null,this.c)],t.p),B.am,B.l,B.O),B.Vd,B.N),null,null)}}
+F(a){return A.cV(A.lB(A.aP(A.c([B.aO0,B.cq,B.aNx,B.M7,A.dF(B.aNh,null,this.c)],t.p),B.am,B.l,B.O),B.Vd,B.N),null,null)}}
 A.a5T.prototype={
 F(a){var s,r,q=this,p=null,o=q.c,n=o.og(q.d),m=n<=1,l=A.b0(12),k=A.c5(B.fN,B.X0,B.o,p,p,new A.bK(B.q,p,p,l,p,p,B.X),p,p,p,B.TU,p,p,p),j=A.je(B.ay,1),i=A.U(o.b,p,1,B.aH,p,B.be,p,p,p),h=o.c,g=t.p
 h=A.c([i,B.dA,A.U(h==="Other"?A.bbF(o):h+" \xb7 "+A.bbF(o),p,p,p,p,B.bO,p,p,p)],g)
@@ -61254,7 +61254,7 @@ j=!l
 i=!j||c==null?"Pick the date":A.o(c)+" "+B.lp[d-1]
 h=l?B.G:B.an
 k=A.c([k,B.dz,A.c9(A.U(i,f,f,f,f,A.cY(f,f,l?B.Z:B.a0,f,f,f,f,f,f,f,f,16,f,f,h,f,f,!0,f,f,f,f,f,f,f,f),f,f,f),1,f)],b)
-if(j)k.push(B.aNB)
+if(j)k.push(B.aNA)
 a.push(A.cO(!1,B.B,!0,r,A.di(!1,o,!0,A.c5(f,A.bP(k,B.t,f,B.l,B.p,0,f),B.o,f,f,new A.bK(f,f,m,n,f,f,B.X),f,f,f,B.kU,f,f,f),f,!0,f,f,f,f,f,f,f,f,f,g.gaBT(),f,f,f,f,f,f,f),B.o,B.j,0,f,f,f,f,f,B.aj))
 a.push(B.et)
 a.push(B.aS3)
@@ -61264,7 +61264,7 @@ r=g.ga3w()?g.gaCT():f
 if(g.ga3w())s="SAVE"
 else s=B.c.al(s.a.a).length===0?"TYPE THEIR NAME FIRST":"PICK THE DATE FIRST"
 a.push(A.dF(A.U(s,f,f,f,f,f,f,f,f),B.aQZ,r))
-if(g.a.w!=null)B.b.R(a,A.c([B.mS,A.bx(B.aOH,new A.aPg(g,a1),f)],b))
+if(g.a.w!=null)B.b.R(a,A.c([B.mS,A.bx(B.aOJ,new A.aPg(g,a1),f)],b))
 a.push(B.c2)
 b=g.a.y
 a.push(A.bx(A.U(b==null?"Cancel":b,f,f,f,f,B.bP,f,f,f),new A.aPh(a1),f))
@@ -61829,7 +61829,7 @@ break
 case 6:case 1:return A.t(q,r)
 case 2:return A.r(o.at(-1),r)}})
 return A.u($async$wo,r)},
-F(a){var s=this,r=null,q=A.fO(r,r,r,!0,!0,r,r,1,r,r,r,!1,r,!1,r,r,A.e8(r,r,B.dl,r,r,new A.aW5(a),r,r,r,r),r,!0,r,r,r,r,r,B.aPh,r,r,r,1,r,!0),p=s.r,o=$.b0A(),n=t.VS,m=A.c([o,new A.qE(10,r)],n),l=t.p
+F(a){var s=this,r=null,q=A.fO(r,r,r,!0,!0,r,r,1,r,r,r,!1,r,!1,r,r,A.e8(r,r,B.dl,r,r,new A.aW5(a),r,r,r,r),r,!0,r,r,r,r,r,B.aPi,r,r,r,1,r,!0),p=s.r,o=$.b0A(),n=t.VS,m=A.c([o,new A.qE(10,r)],n),l=t.p
 m=A.c([B.aNb,B.c2,B.aNS,B.e0,A.fr(r,B.a4B,!0,r,!0,B.x,r,A.fL(),s.d,r,r,r,r,r,2,s.Zq("+91  "),B.M,!0,r,!0,!p,!1,r,B.aS,r,r,m,r,B.fB,r,r,r,1,r,r,!1,"\u2022",r,r,r,new A.aW6(s),r,!1,r,r,!1,r,!0,r,B.b_,r,r,r,r,r,r,r,r,r,r,r,B.aMA,!0,B.ad,r,B.cs,r,r,r,r)],l)
 if(s.r){p=A.c([o,new A.qE(6,r)],n)
 B.b.R(m,A.c([B.mS,B.aNJ,B.bG,A.fr(r,B.xT,!1,r,!0,B.x,r,A.fL(),s.e,r,r,r,r,r,2,s.anJ(),B.M,!0,r,!0,r,!1,s.f,B.aS,r,r,p,r,B.rY,r,r,r,1,r,r,!1,"\u2022",r,r,r,new A.aW7(s),r,!1,r,r,!1,r,!0,r,B.b_,r,r,r,r,r,r,r,r,r,r,r,B.MG,!0,B.a9,r,B.cs,r,r,r,r)],l))}p=s.x
@@ -61842,8 +61842,8 @@ if(p)p="ONE MOMENT\u2026"
 else p=s.r?"CONTINUE":"SEND ME THE CODE"
 m.push(A.dF(A.U(p,r,r,r,r,r,r,r,r),r,o))
 if(s.r){p=s.w
-o=A.bx(B.aO2,p?r:s.ga4W(),r)
-B.b.R(m,A.c([B.cp,o,A.bx(B.aOO,p?r:new A.aW8(s),r)],l))}return A.fp(q,r,A.lB(A.aP(m,B.am,B.l,B.p),B.V1,B.N),r)},
+o=A.bx(B.aO3,p?r:s.ga4W(),r)
+B.b.R(m,A.c([B.cp,o,A.bx(B.aOP,p?r:new A.aW8(s),r)],l))}return A.fp(q,r,A.lB(A.aP(m,B.am,B.l,B.p),B.V1,B.N),r)},
 Zq(a){var s=null
 return A.mC(s,new A.dt(4,A.b0(10),B.bT),s,B.ha,s,s,s,s,!0,new A.dt(4,A.b0(10),B.bT),s,s,s,s,s,B.j,!0,s,s,s,s,new A.dt(4,A.b0(10),B.fR),s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,!0,!1,s,s,s,s,B.aJo,a,s,s,s,s,s,s,s,s)},
 anJ(){return this.Zq(null)}}
@@ -61964,7 +61964,7 @@ B.b.ji(s)
 A.bq3(s)
 c=A.bG(a,B.dH,t.w).w
 r=t.p
-q=A.bP(A.c([B.Vy,A.bx(B.aO7,new A.aX4(a),d)],r),B.t,d,B.l,B.p,0,d)
+q=A.bP(A.c([B.Vy,A.bx(B.aO9,new A.aX4(a),d)],r),B.t,d,B.l,B.p,0,d)
 p=e.ga5p()
 o=e.gkE()
 n=B.d.c9(26*e.gkE().f/e.a.c.f,14,48)
@@ -62499,7 +62499,7 @@ $0(){return null},
 $S:16}
 A.zY.prototype={
 F(a){var s=null
-return A.fp(A.fO(s,s,s,!0,!0,s,s,1,s,s,s,!1,s,!1,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,1,s,!0),s,A.cV(new A.en(B.OI,new A.a2(B.oH,A.aP(A.c([B.aNe,B.d7,B.aOh,B.e0,A.dF(B.aP_,s,new A.atu()),B.d7,A.zZ(B.aO8,new A.atv(),A.qR(s,s,s,s,s,s,s,s,s,s,s,B.rL,s,s,new A.dd(A.b0(12),B.C),s,s,s,s,s))],t.p),B.t,B.l,B.O),s),s),s,s),s)}}
+return A.fp(A.fO(s,s,s,!0,!0,s,s,1,s,s,s,!1,s,!1,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,1,s,!0),s,A.cV(new A.en(B.OI,new A.a2(B.oH,A.aP(A.c([B.aNe,B.d7,B.aOj,B.e0,A.dF(B.aP0,s,new A.atu()),B.d7,A.zZ(B.aOa,new A.atv(),A.qR(s,s,s,s,s,s,s,s,s,s,s,B.rL,s,s,new A.dd(A.b0(12),B.C),s,s,s,s,s))],t.p),B.t,B.l,B.O),s),s),s,s),s)}}
 A.atu.prototype={
 $0(){return A.acU($.bfC(),B.xf)},
 $S:0}
@@ -127765,8 +127765,8 @@ B.aPr=new A.a5("No address yet",null,B.aKV,B.a9,null,null,null,null,null,null)
 B.bG=new A.cj(null,8,null,null)
 B.Z=new A.G(1,0.4,0.3803921568627451,0.3568627450980392,B.h)
 B.ex=new A.w(!0,B.Z,null,null,null,null,15,null,null,null,null,null,1.45,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aOi=new A.a5("Add it once. We will only ask again if you want to change it.",null,B.ex,B.a9,null,null,null,null,null,null)
-B.a1a=s([B.WW,B.cq,B.aPr,B.bG,B.aOi],t.p)
+B.aOk=new A.a5("Add it once. We will only ask again if you want to change it.",null,B.ex,B.a9,null,null,null,null,null,null)
+B.a1a=s([B.WW,B.cq,B.aPr,B.bG,B.aOk],t.p)
 B.Sd=new A.l2(B.N,B.l,B.O,B.t,null,B.ce,null,0,B.a1a,null)
 B.azG=new A.a2(B.Ve,B.Sd,null)
 B.Qv=new A.hJ(B.Y,null,null,B.azG,null)
@@ -128337,11 +128337,11 @@ B.wh=new A.u6(!1,!1,!1,!0)
 B.dk=new A.UG(0,"tight")
 B.an=new A.iL(600)
 B.aM6=new A.w(!0,B.Z,null,null,null,null,15,B.an,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aOv=new A.a5("Your words",null,B.aM6,null,null,null,null,null,null,null)
-B.Vy=new A.kf(1,B.dk,B.aOv,null)
+B.aOx=new A.a5("Your words",null,B.aM6,null,null,null,null,null,null,null)
+B.Vy=new A.kf(1,B.dk,B.aOx,null)
 B.aMx=new A.w(!0,B.Z,null,null,null,null,14,null,null,null,null,null,1.35,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aOc=new A.a5("Printed on card stock, folded, with your photo and words inside.",null,B.aMx,null,null,null,null,null,null,null)
-B.Vz=new A.kf(1,B.dk,B.aOc,null)
+B.aOe=new A.a5("Printed on card stock, folded, with your photo and words inside.",null,B.aMx,null,null,null,null,null,null,null)
+B.Vz=new A.kf(1,B.dk,B.aOe,null)
 B.VA=new A.FL(null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.kX=new A.o3(!1,!1,!1,!1)
 B.kY=new A.o3(!1,!1,!1,!0)
@@ -132487,8 +132487,8 @@ B.azh=new A.Xx(1,"end")
 B.azi=new A.Xy(0,"nearestOverlay")
 B.azj=new A.Xy(1,"rootOverlay")
 B.dD=new A.w(!0,B.Z,null,null,null,null,14,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aOx=new A.a5("Posted to each home. Sample prices, for testing.",null,B.dD,null,null,null,null,null,null,null)
-B.azk=new A.a2(B.kT,B.aOx,null)
+B.aOz=new A.a5("Posted to each home. Sample prices, for testing.",null,B.dD,null,null,null,null,null,null,null)
+B.azk=new A.a2(B.kT,B.aOz,null)
 B.e4=new A.w(!0,null,null,null,null,null,20,B.aa,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.aPs=new A.a5("Which group?",null,B.e4,null,null,null,null,null,null,null)
 B.azn=new A.a2(B.hb,B.aPs,null)
@@ -132499,15 +132499,15 @@ B.TX=new A.S(0,14,0,0)
 B.aSF=new A.a6P(null)
 B.azp=new A.a2(B.TX,B.aSF,null)
 B.jM=new A.w(!0,B.Z,null,null,null,null,15,null,null,null,null,null,1.4,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aP7=new A.a5('Put a gift inside a card \u2014 on the card\'s last screen, "Add a gift inside". It shows here, with whether they have opened it.',null,B.jM,null,null,null,null,null,null,null)
-B.azq=new A.a2(B.oG,B.aP7,null)
+B.aP9=new A.a5('Put a gift inside a card \u2014 on the card\'s last screen, "Add a gift inside". It shows here, with whether they have opened it.',null,B.jM,null,null,null,null,null,null,null)
+B.azq=new A.a2(B.oG,B.aP9,null)
 B.mY=new A.w(!0,B.Z,null,null,null,null,16,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.aNP=new A.a5("No one else in People yet.",null,B.mY,null,null,null,null,null,null,null)
 B.azr=new A.a2(B.oH,B.aNP,null)
 B.Vi=new A.S(4,0,4,14)
 B.mZ=new A.w(!0,B.Z,null,null,null,null,14,null,null,null,null,null,1.4,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aOz=new A.a5("Design here, collect it printed at any of these shops.",null,B.mZ,null,null,null,null,null,null,null)
-B.azs=new A.a2(B.Vi,B.aOz,null)
+B.aOB=new A.a5("Design here, collect it printed at any of these shops.",null,B.mZ,null,null,null,null,null,null,null)
+B.azs=new A.a2(B.Vi,B.aOB,null)
 B.Vj=new A.S(4,18,4,0)
 B.bO=new A.w(!0,B.Z,null,null,null,null,13,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.aNo=new A.a5("Your phone reminds you three days before, and on the day.",null,B.bO,null,null,null,null,null,null,null)
@@ -132516,34 +132516,34 @@ B.UT=new A.S(20,18,20,8)
 B.aL9=new A.w(!0,B.Z,null,null,null,null,15,B.aa,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.aNO=new A.a5("Add more",null,B.aL9,null,null,null,null,null,null,null)
 B.azv=new A.a2(B.UT,B.aNO,null)
-B.aOG=new A.a5("No kiosk there yet \u2014 more shops are joining.",null,B.ex,B.a9,null,null,null,null,null,null)
-B.azw=new A.a2(B.w7,B.aOG,null)
+B.aOI=new A.a5("No kiosk there yet \u2014 more shops are joining.",null,B.ex,B.a9,null,null,null,null,null,null)
+B.azw=new A.a2(B.w7,B.aOI,null)
 B.Vm=new A.S(4,6,4,10)
 B.aNR=new A.a5("Save as",null,B.bO,null,null,null,null,null,null,null)
 B.azy=new A.a2(B.Vm,B.aNR,null)
-B.aOA=new A.a5("Who is it for?",null,B.e4,null,null,null,null,null,null,null)
-B.azz=new A.a2(B.hb,B.aOA,null)
-B.aPe=new A.a5("Who is the gift for?",null,B.e4,null,null,null,null,null,null,null)
-B.azA=new A.a2(B.hb,B.aPe,null)
-B.aO1=new A.a5("Print a card at any Ala kiosk and spin the wheel. What you win shows up here, ready to use.",null,B.jM,null,null,null,null,null,null,null)
-B.azB=new A.a2(B.oG,B.aO1,null)
+B.aOC=new A.a5("Who is it for?",null,B.e4,null,null,null,null,null,null,null)
+B.azz=new A.a2(B.hb,B.aOC,null)
+B.aPf=new A.a5("Who is the gift for?",null,B.e4,null,null,null,null,null,null,null)
+B.azA=new A.a2(B.hb,B.aPf,null)
+B.aO2=new A.a5("Print a card at any Ala kiosk and spin the wheel. What you win shows up here, ready to use.",null,B.jM,null,null,null,null,null,null,null)
+B.azB=new A.a2(B.oG,B.aO2,null)
 B.TS=new A.S(0,0,0,40)
-B.aOq=new A.a5("Opening your card\u2026",null,B.dD,null,null,null,null,null,null,null)
-B.azC=new A.a2(B.TS,B.aOq,null)
+B.aOs=new A.a5("Opening your card\u2026",null,B.dD,null,null,null,null,null,null,null)
+B.azC=new A.a2(B.TS,B.aOs,null)
 B.Uq=new A.S(16,12,16,12)
 B.WF=new A.aQ(63668,"MaterialIcons",!1)
 B.WV=new A.bE(B.WF,18,B.q,null,null)
 B.jE=new A.cj(6,null,null,null)
 B.MP=new A.w(!0,B.q,null,null,null,null,16,B.aa,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aP1=new A.a5("See both pages",null,B.MP,null,null,null,null,null,null,null)
-B.a0C=s([B.WV,B.jE,B.aP1],t.p)
+B.aP2=new A.a5("See both pages",null,B.MP,null,null,null,null,null,null,null)
+B.a0C=s([B.WV,B.jE,B.aP2],t.p)
 B.aDT=new A.lw(B.al,B.l,B.O,B.t,null,B.ce,null,0,B.a0C,null)
 B.azD=new A.a2(B.Uq,B.aDT,null)
 B.jN=new A.w(!0,B.Z,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aOL=new A.a5("\xb7",null,B.jN,null,null,null,null,null,null,null)
-B.azE=new A.a2(B.cZ,B.aOL,null)
-B.aPj=new A.a5("Sample shops, for testing.",null,B.bO,null,null,null,null,null,null,null)
-B.azF=new A.a2(B.vT,B.aPj,null)
+B.aON=new A.a5("\xb7",null,B.jN,null,null,null,null,null,null,null)
+B.azE=new A.a2(B.cZ,B.aON,null)
+B.aPk=new A.a5("Sample shops, for testing.",null,B.bO,null,null,null,null,null,null,null)
+B.azF=new A.a2(B.vT,B.aPk,null)
 B.azI=new A.HJ(null)
 B.cc=new A.XH(0,"fill")
 B.bj=new A.XH(1,"stroke")
@@ -132591,8 +132591,8 @@ B.aAA=new A.A9(4,"unknown")
 B.rN=new A.cj(22,22,B.uG,null)
 B.rM=new A.cj(18,null,null,null)
 B.bI=new A.w(!0,null,null,null,null,null,16,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aO0=new A.a5("Keeping your card\u2026",null,B.bI,null,null,null,null,null,null,null)
-B.VJ=new A.eJ(1,B.bu,B.aO0,null)
+B.aO1=new A.a5("Keeping your card\u2026",null,B.bI,null,null,null,null,null,null,null)
+B.VJ=new A.eJ(1,B.bu,B.aO1,null)
 B.a3n=s([B.rN,B.rM,B.VJ],t.p)
 B.aDS=new A.lw(B.al,B.l,B.O,B.t,null,B.ce,null,0,B.a3n,null)
 B.azm=new A.a2(B.kV,B.aDS,null)
@@ -132702,8 +132702,8 @@ B.aDU=new A.lw(B.al,B.l,B.O,B.t,null,B.ce,null,0,B.a0P,null)
 B.Wp=new A.aQ(62625,"MaterialIcons",!1)
 B.Xc=new A.bE(B.Wp,15,B.Z,null,null)
 B.aIv=new A.w(!0,B.Z,null,null,null,null,12,B.aa,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aOQ=new A.a5("PREVIEW",null,B.aIv,null,null,null,null,null,null,null)
-B.a3N=s([B.Xc,B.jE,B.aOQ],t.p)
+B.aOR=new A.a5("PREVIEW",null,B.aIv,null,null,null,null,null,null,null)
+B.a3N=s([B.Xc,B.jE,B.aOR],t.p)
 B.aDV=new A.lw(B.al,B.l,B.O,B.t,null,B.ce,null,0,B.a3N,null)
 B.uF=new A.k6(2,null,null,null,null,B.j,null,null,null,null)
 B.aGv=new A.cj(18,18,B.uF,null)
@@ -133119,8 +133119,8 @@ B.aGF=new A.JX(2,16,14,0.62,null)
 B.fz=new A.aAx(0,"firstIsTop")
 B.aGB=new A.cj(null,40,null,null)
 B.M8=new A.f0(B.aGB,null)
-B.aP8=new A.a5("Nothing sent to the kiosks yet.",null,B.mY,null,null,null,null,null,null,null)
-B.azl=new A.a2(B.w6,B.aP8,null)
+B.aPa=new A.a5("Nothing sent to the kiosks yet.",null,B.mY,null,null,null,null,null,null,null)
+B.azl=new A.a2(B.w6,B.aPa,null)
 B.aGG=new A.f0(B.azl,null)
 B.azx=new A.a2(B.oH,B.uD,null)
 B.M9=new A.f0(B.azx,null)
@@ -133135,20 +133135,20 @@ B.aGK=new A.lC(3,"hide")
 B.aTv=new A.lC(4,"remove")
 B.aGL=new A.lC(5,"timeout")
 B.aGM=new A.AW(null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aNs=new A.a5("Address copied",null,null,null,null,null,null,null,null,null)
-B.aGN=new A.jI(B.aNs,null,null,null,null,null,null,null,B.rP,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
-B.aPp=new A.a5("Kept on this phone \u2014 it is waiting in My cards.",null,null,null,null,null,null,null,null,null)
-B.aGO=new A.jI(B.aPp,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
-B.aP2=new A.a5("Saved in Me \u2192 Gifts & rewards.",null,null,null,null,null,null,null,null,null)
-B.aGP=new A.jI(B.aP2,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
-B.aOD=new A.a5("Could not remove it \u2014 try again in a moment.",null,null,null,null,null,null,null,null,null)
-B.aGQ=new A.jI(B.aOD,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
+B.aNr=new A.a5("Address copied",null,null,null,null,null,null,null,null,null)
+B.aGN=new A.jI(B.aNr,null,null,null,null,null,null,null,B.rP,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
+B.aP3=new A.a5("Saved in Me \u2192 Gifts & rewards.",null,null,null,null,null,null,null,null,null)
+B.aGO=new A.jI(B.aP3,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
+B.aOF=new A.a5("Could not remove it \u2014 try again in a moment.",null,null,null,null,null,null,null,null,null)
+B.aGP=new A.jI(B.aOF,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
 B.aNl=new A.a5("WhatsApp did not open on this phone.",null,null,null,null,null,null,null,null,null)
 B.Md=new A.jI(B.aNl,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
-B.aP0=new A.a5("Your account is deleted.",null,null,null,null,null,null,null,null,null)
-B.aGR=new A.jI(B.aP0,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
-B.aO6=new A.a5("Could not keep it just now. Your card is still here.",null,null,null,null,null,null,null,null,null)
-B.aGS=new A.jI(B.aO6,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
+B.aP1=new A.a5("Your account is deleted.",null,null,null,null,null,null,null,null,null)
+B.aGQ=new A.jI(B.aP1,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
+B.aO4=new A.a5("Kept in this browser \u2014 it is waiting in My cards.",null,null,null,null,null,null,null,null,null)
+B.aGR=new A.jI(B.aO4,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
+B.aO8=new A.a5("Could not keep it just now. Your card is still here.",null,null,null,null,null,null,null,null,null)
+B.aGS=new A.jI(B.aO8,null,null,null,null,null,null,null,null,null,null,null,null,B.bW,!1,null,null,null,B.x,null)
 B.Me=new A.K2(0,"permissive")
 B.aGT=new A.K2(1,"normal")
 B.aGU=new A.K2(2,"forced")
@@ -133605,25 +133605,25 @@ B.aNi=new A.a5("MY SAVED CARDS",null,null,null,null,null,null,null,null,null)
 B.aNj=new A.a5("Add or take out people",null,B.cC,null,null,null,null,null,null,null)
 B.aNk=new A.a5("Print it at any Ala kiosk, whenever you like.",null,B.jM,B.a9,null,null,null,null,null,null)
 B.aNp=new A.a5("Save",null,null,null,null,null,null,null,null,null)
-B.aNq=new A.a5("It is only on this phone, so it cannot be brought back. You can always make another.",null,null,null,null,null,null,null,null,null)
-B.aNr=new A.a5("SEE IT ALIVE",null,null,null,null,null,null,null,null,null)
-B.aNt=new A.a5("Make this my default",null,B.hV,null,null,null,null,null,null,null)
-B.aNu=new A.a5("Paying in the app is not switched on yet",null,null,null,null,null,null,null,null,null)
-B.aNv=new A.a5("Change it",null,null,null,null,null,null,null,null,null)
-B.aNw=new A.a5("Me",null,B.be,null,null,null,null,null,null,null)
-B.aNx=new A.a5("Your card",null,B.be,null,null,null,null,null,null,null)
-B.aNy=new A.a5("Add the birthdays and anniversaries you care about. What's coming up shows here \u2014 and your phone reminds you three days before.",null,B.ex,B.a9,null,null,null,null,null,null)
-B.aNz=new A.a5("People",null,B.be,null,null,null,null,null,null,null)
-B.aNA=new A.a5("Just this card",null,null,null,null,null,null,null,null,null)
+B.aNq=new A.a5("SEE IT ALIVE",null,null,null,null,null,null,null,null,null)
+B.aNs=new A.a5("Make this my default",null,B.hV,null,null,null,null,null,null,null)
+B.aNt=new A.a5("Paying in the app is not switched on yet",null,null,null,null,null,null,null,null,null)
+B.aNu=new A.a5("Change it",null,null,null,null,null,null,null,null,null)
+B.aNv=new A.a5("Me",null,B.be,null,null,null,null,null,null,null)
+B.aNw=new A.a5("Your card",null,B.be,null,null,null,null,null,null,null)
+B.aNx=new A.a5("Add the birthdays and anniversaries you care about. What's coming up shows here \u2014 and your phone reminds you three days before.",null,B.ex,B.a9,null,null,null,null,null,null)
+B.aNy=new A.a5("People",null,B.be,null,null,null,null,null,null,null)
+B.aNz=new A.a5("Just this card",null,null,null,null,null,null,null,null,null)
 B.aMm=new A.w(!0,B.q,null,null,null,null,14,B.an,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aNB=new A.a5("Change",null,B.aMm,null,null,null,null,null,null,null)
+B.aNA=new A.a5("Change",null,B.aMm,null,null,null,null,null,null,null)
 B.MS=new A.a5("OK",null,null,null,null,null,null,null,null,null)
-B.aNC=new A.a5("Use this",null,null,null,null,null,null,null,null,null)
-B.aND=new A.a5("Stay",null,null,null,null,null,null,null,null,null)
-B.aNE=new A.a5("Delete my account",null,B.e4,null,null,null,null,null,null,null)
-B.aNF=new A.a5("Add someone",null,B.e4,null,null,null,null,null,null,null)
+B.aNB=new A.a5("Use this",null,null,null,null,null,null,null,null,null)
+B.aNC=new A.a5("Stay",null,null,null,null,null,null,null,null,null)
+B.aND=new A.a5("Delete my account",null,B.e4,null,null,null,null,null,null,null)
+B.aNE=new A.a5("Add someone",null,B.e4,null,null,null,null,null,null,null)
 B.MC=new A.w(!0,B.q,null,null,null,null,16,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aNG=new A.a5("Send to many people",null,B.MC,null,null,null,null,null,null,null)
+B.aNF=new A.a5("Send to many people",null,B.MC,null,null,null,null,null,null,null)
+B.aNG=new A.a5("Kept in this browser",null,B.t1,null,null,null,null,null,null,null)
 B.aNH=new A.a5("Try again",null,B.bI,null,null,null,null,null,null,null)
 B.aNI=new A.a5("My addresses",null,B.be,null,null,null,null,null,null,null)
 B.aNJ=new A.a5("Enter the code we sent by SMS",null,B.dD,null,null,null,null,null,null,null)
@@ -133643,86 +133643,86 @@ B.aIt=new A.w(!0,B.Z,null,null,null,null,12,B.aa,null,1.5,null,null,null,null,nu
 B.aNW=new A.a5("AT THE KIOSK",null,B.aIt,null,null,null,null,null,null,null)
 B.aNX=new A.a5("Not this one",null,B.bP,null,null,null,null,null,null,null)
 B.aNY=new A.a5("Open WhatsApp anyway",null,null,null,null,null,null,null,null,null)
-B.aNZ=new A.a5("Ask the ones not asked",null,B.bI,null,null,null,null,null,null,null)
+B.aNZ=new A.a5("This closes your Alacard account and signs you out. Your name, addresses and reminders are wiped from this browser. Records of cards you have already bought are kept, as tax rules require.",null,B.ex,null,null,null,null,null,null,null)
+B.aO_=new A.a5("Ask the ones not asked",null,B.bI,null,null,null,null,null,null,null)
 B.aIh=new A.w(!0,B.q,null,"Pacifico",null,null,32,null,null,null,null,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aO_=new A.a5("Never miss a moment",null,B.aIh,B.a9,null,null,null,null,null,null)
-B.aO2=new A.a5("Send it again",null,B.ey,null,null,null,null,null,null,null)
+B.aO0=new A.a5("Never miss a moment",null,B.aIh,B.a9,null,null,null,null,null,null)
+B.aO3=new A.a5("Send it again",null,B.ey,null,null,null,null,null,null,null)
 B.MH=new A.w(!0,B.q,null,"Pacifico",null,null,26,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aO3=new A.a5("Everyone you send cards to",null,B.MH,B.a9,null,null,null,null,null,null)
-B.aO4=new A.a5("Not now",null,null,null,null,null,null,null,null,null)
-B.aO5=new A.a5("Change name",null,B.cC,null,null,null,null,null,null,null)
+B.aO5=new A.a5("Everyone you send cards to",null,B.MH,B.a9,null,null,null,null,null,null)
+B.aO6=new A.a5("Not now",null,null,null,null,null,null,null,null,null)
+B.aO7=new A.a5("Change name",null,B.cC,null,null,null,null,null,null,null)
 B.aL3=new A.w(!0,B.q,null,null,null,null,17,B.aa,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aO7=new A.a5("Done",null,B.aL3,null,null,null,null,null,null,null)
-B.aO8=new A.a5("Get Ala on Google Play",null,null,null,null,null,null,null,null,null)
-B.aO9=new A.a5("DONE \u2014 BACK TO MY CARD",null,null,null,null,null,null,null,null,null)
-B.aOa=new A.a5("Remove this card",null,B.ey,null,null,null,null,null,null,null)
-B.aOb=new A.a5("Or send one message to a WhatsApp group",null,B.cC,null,null,null,null,null,null,null)
-B.aOd=new A.a5("Kiosks near me",null,null,null,null,null,null,null,null,null)
-B.aOe=new A.a5("They come off People and out of every group. Their reminders stay on Reminders.",null,null,null,null,null,null,null,null,null)
+B.aO9=new A.a5("Done",null,B.aL3,null,null,null,null,null,null,null)
+B.aOa=new A.a5("Get Ala on Google Play",null,null,null,null,null,null,null,null,null)
+B.aOb=new A.a5("DONE \u2014 BACK TO MY CARD",null,null,null,null,null,null,null,null,null)
+B.aOc=new A.a5("Remove this card",null,B.ey,null,null,null,null,null,null,null)
+B.aOd=new A.a5("Or send one message to a WhatsApp group",null,B.cC,null,null,null,null,null,null,null)
+B.aOf=new A.a5("Kiosks near me",null,null,null,null,null,null,null,null,null)
+B.aOg=new A.a5("They come off People and out of every group. Their reminders stay on Reminders.",null,null,null,null,null,null,null,null,null)
 B.MV=new A.a5("TRY AGAIN",null,null,null,null,null,null,null,null,null)
-B.aOf=new A.a5("ADD FROM CONTACTS",null,null,null,null,null,null,null,null,null)
-B.aOg=new A.a5("Keep my layout",null,null,null,null,null,null,null,null,null)
-B.aOh=new A.a5("Open the Ala app and point your phone at the front of the card.",null,B.ex,B.a9,null,null,null,null,null,null)
-B.aOj=new A.a5("Pick people",null,B.be,null,null,null,null,null,null,null)
-B.aOk=new A.a5("Send it to the kiosks, then walk into any shop with one, enter your number, and it prints while you wait. Pay at the counter.",null,B.mZ,null,null,null,null,null,null,null)
-B.aOl=new A.a5("Their cards go out as soon as they put in an address. If someone does not within 7 days, the money for their card comes back to you.",null,B.ME,null,null,null,null,null,null,null)
-B.aOm=new A.a5("Remind me next year",null,null,null,null,null,null,null,null,null)
-B.aOn=new A.a5("Waiting at every Ala kiosk",null,B.t1,null,null,null,null,null,null,null)
-B.aOo=new A.a5("Save test gift",null,null,null,null,null,null,null,null,null)
-B.aOp=new A.a5("Reminders",null,B.be,null,null,null,null,null,null,null)
+B.aOh=new A.a5("ADD FROM CONTACTS",null,null,null,null,null,null,null,null,null)
+B.aOi=new A.a5("Keep my layout",null,null,null,null,null,null,null,null,null)
+B.aOj=new A.a5("Open the Ala app and point your phone at the front of the card.",null,B.ex,B.a9,null,null,null,null,null,null)
+B.aOl=new A.a5("Pick people",null,B.be,null,null,null,null,null,null,null)
+B.aOm=new A.a5("Send it to the kiosks, then walk into any shop with one, enter your number, and it prints while you wait. Pay at the counter.",null,B.mZ,null,null,null,null,null,null,null)
+B.aOn=new A.a5("Their cards go out as soon as they put in an address. If someone does not within 7 days, the money for their card comes back to you.",null,B.ME,null,null,null,null,null,null,null)
+B.aOo=new A.a5("Remind me next year",null,null,null,null,null,null,null,null,null)
+B.aOp=new A.a5("Waiting at every Ala kiosk",null,B.t1,null,null,null,null,null,null,null)
+B.aOq=new A.a5("Save test gift",null,null,null,null,null,null,null,null,null)
+B.aOr=new A.a5("Reminders",null,B.be,null,null,null,null,null,null,null)
 B.aK0=new A.w(!0,B.a0,null,null,null,null,17,null,null,null,null,null,1.45,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aOs=new A.a5("Nothing waiting yet.\n\nMake a card and it will be here, ready to print at any Ala kiosk.",null,B.aK0,B.a9,null,null,null,null,null,null)
-B.aOt=new A.a5("Gifts & rewards",null,B.be,null,null,null,null,null,null,null)
-B.aOu=new A.a5("Check your connection and try again.",null,B.bO,null,null,null,null,null,null,null)
-B.aOw=new A.a5("Have a list made on a computer? Upload it (Excel)",null,B.cC,null,null,null,null,null,null,null)
-B.aOy=new A.a5("Preview",null,B.MP,null,null,null,null,null,null,null)
+B.aOu=new A.a5("Nothing waiting yet.\n\nMake a card and it will be here, ready to print at any Ala kiosk.",null,B.aK0,B.a9,null,null,null,null,null,null)
+B.aOv=new A.a5("Gifts & rewards",null,B.be,null,null,null,null,null,null,null)
+B.aOw=new A.a5("Check your connection and try again.",null,B.bO,null,null,null,null,null,null,null)
+B.aOy=new A.a5("Have a list made on a computer? Upload it (Excel)",null,B.cC,null,null,null,null,null,null,null)
+B.aOA=new A.a5("Preview",null,B.MP,null,null,null,null,null,null,null)
 B.MW=new A.a5("SIGN IN",null,null,null,null,null,null,null,null,null)
-B.aOB=new A.a5("Sign out",null,B.ey,null,null,null,null,null,null,null)
+B.aOD=new A.a5("Sign out",null,B.ey,null,null,null,null,null,null,null)
 B.n2=new A.a5("DONE",null,null,null,null,null,null,null,null,null)
-B.aOC=new A.a5("Type their address",null,B.cC,null,null,null,null,null,null,null)
-B.aOE=new A.a5("They open it in the Ala app with their own number. The code is never printed.",null,B.jM,null,null,null,null,null,null,null)
-B.aOF=new A.a5("Keep my account",null,B.jN,null,null,null,null,null,null,null)
+B.aOE=new A.a5("Type their address",null,B.cC,null,null,null,null,null,null,null)
+B.aOG=new A.a5("They open it in the Ala app with their own number. The code is never printed.",null,B.jM,null,null,null,null,null,null,null)
+B.aOH=new A.a5("Keep my account",null,B.jN,null,null,null,null,null,null,null)
 B.t2=new A.a5("Keep it",null,null,null,null,null,null,null,null,null)
 B.MX=new A.a5("Delete",null,B.ey,null,null,null,null,null,null,null)
-B.aOH=new A.a5("Remove this reminder",null,B.cC,null,null,null,null,null,null,null)
-B.aOI=new A.a5("Remove this design?",null,null,null,null,null,null,null,null,null)
-B.aOJ=new A.a5("Leave?",null,null,null,null,null,null,null,null,null)
-B.aOK=new A.a5("THE NAMES ARE RIGHT",null,null,null,null,null,null,null,null,null)
-B.aOM=new A.a5("Privacy policy",null,B.be,null,null,null,null,null,null,null)
-B.aON=new A.a5("Kept on this phone",null,B.t1,null,null,null,null,null,null,null)
-B.aOO=new A.a5("Different number",null,B.jN,null,null,null,null,null,null,null)
-B.aOP=new A.a5("Your saved cards stay under your number. Sign in again any time.",null,null,null,null,null,null,null,null,null)
-B.aOR=new A.a5("Add them once. Their birthdays, addresses and groups stay here, ready for the next card.",null,B.ex,B.a9,null,null,null,null,null,null)
-B.aOS=new A.a5("The address page is not ready yet",null,null,null,null,null,null,null,null,null)
-B.aOT=new A.a5("A sample code \u2014 the real one comes from the shop.",null,B.bO,null,null,null,null,null,null,null)
-B.aOU=new A.a5("MAKE A CARD",null,null,null,null,null,null,null,null,null)
-B.aOV=new A.a5("Copy address",null,null,null,null,null,null,null,null,null)
+B.aOJ=new A.a5("Remove this reminder",null,B.cC,null,null,null,null,null,null,null)
+B.aOK=new A.a5("Remove this design?",null,null,null,null,null,null,null,null,null)
+B.aOL=new A.a5("Leave?",null,null,null,null,null,null,null,null,null)
+B.aOM=new A.a5("THE NAMES ARE RIGHT",null,null,null,null,null,null,null,null,null)
+B.aOO=new A.a5("Privacy policy",null,B.be,null,null,null,null,null,null,null)
+B.aOP=new A.a5("Different number",null,B.jN,null,null,null,null,null,null,null)
+B.aOQ=new A.a5("Your saved cards stay under your number. Sign in again any time.",null,null,null,null,null,null,null,null,null)
+B.aOS=new A.a5("Add them once. Their birthdays, addresses and groups stay here, ready for the next card.",null,B.ex,B.a9,null,null,null,null,null,null)
+B.aOT=new A.a5("The address page is not ready yet",null,null,null,null,null,null,null,null,null)
+B.aOU=new A.a5("A sample code \u2014 the real one comes from the shop.",null,B.bO,null,null,null,null,null,null,null)
+B.aOV=new A.a5("MAKE A CARD",null,null,null,null,null,null,null,null,null)
+B.aOW=new A.a5("Copy address",null,null,null,null,null,null,null,null,null)
 B.MY=new A.a5("Put back",null,B.hV,null,null,null,null,null,null,null)
-B.aOW=new A.a5("Find a kiosk",null,B.be,null,null,null,null,null,null,null)
+B.aOX=new A.a5("Find a kiosk",null,B.be,null,null,null,null,null,null,null)
 B.MZ=new A.a5("Cancel",null,B.bP,null,null,null,null,null,null,null)
-B.aOX=new A.a5("YES, ADD THEIR NAMES",null,null,null,null,null,null,null,null,null)
-B.aOY=new A.a5("Add a secret video (optional)",null,B.bO,B.a9,null,null,null,null,null,null)
-B.aOZ=new A.a5("It stops waiting at the kiosks, and the design cannot be brought back. You can always make another.",null,null,null,null,null,null,null,null,null)
-B.aP_=new A.a5("Get Ala on the App Store",null,null,null,null,null,null,null,null,null)
+B.aOY=new A.a5("YES, ADD THEIR NAMES",null,null,null,null,null,null,null,null,null)
+B.aOZ=new A.a5("Add a secret video (optional)",null,B.bO,B.a9,null,null,null,null,null,null)
+B.aP_=new A.a5("It stops waiting at the kiosks, and the design cannot be brought back. You can always make another.",null,null,null,null,null,null,null,null,null)
+B.aP0=new A.a5("Get Ala on the App Store",null,null,null,null,null,null,null,null,null)
 B.t3=new A.a5("Remove",null,B.ey,null,null,null,null,null,null,null)
-B.aP3=new A.a5("Remove this design",null,B.ey,null,null,null,null,null,null,null)
+B.aP4=new A.a5("Remove this design",null,B.ey,null,null,null,null,null,null,null)
 B.aL8=new A.w(!0,B.Z,null,null,null,null,16,null,null,null,null,null,1.45,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aP4=new A.a5("Sign in to see the cards waiting for you at the kiosk.",null,B.aL8,B.a9,null,null,null,null,null,null)
-B.aP5=new A.a5("Delete this address?",null,null,null,null,null,null,null,null,null)
-B.aP6=new A.a5("The people in it stay in People.",null,null,null,null,null,null,null,null,null)
-B.aPa=new A.a5("How should it be signed?",null,null,null,null,null,null,null,null,null)
-B.aPb=new A.a5("Remove this card?",null,null,null,null,null,null,null,null,null)
-B.aPc=new A.a5("This closes your Alacard account and signs you out. Your name, addresses and reminders are wiped from this phone. Records of cards you have already bought are kept, as tax rules require.",null,B.ex,null,null,null,null,null,null,null)
-B.aPd=new A.a5("Add a gift inside",null,B.MH,null,null,null,null,null,null,null)
-B.aPf=new A.a5("Remove from People",null,B.ey,null,null,null,null,null,null,null)
-B.aPg=new A.a5("Someone not here? Add from contacts",null,B.MC,null,null,null,null,null,null,null)
-B.aPh=new A.a5("Sign in",null,B.be,null,null,null,null,null,null,null)
-B.aPi=new A.a5("Sign out?",null,null,null,null,null,null,null,null,null)
-B.aPk=new A.a5("This list could not be read",null,null,null,null,null,null,null,null,null)
-B.aPl=new A.a5("What they will see",null,B.be,null,null,null,null,null,null,null)
-B.aPm=new A.a5("My cards",null,B.be,null,null,null,null,null,null,null)
-B.aPn=new A.a5("This page is full of stickers",null,null,null,null,null,null,null,null,null)
-B.aPo=new A.a5("not asked",null,B.dD,null,null,null,null,null,null,null)
+B.aP5=new A.a5("Sign in to see the cards waiting for you at the kiosk.",null,B.aL8,B.a9,null,null,null,null,null,null)
+B.aP6=new A.a5("It is only in this browser, so it cannot be brought back. You can always make another.",null,null,null,null,null,null,null,null,null)
+B.aP7=new A.a5("Delete this address?",null,null,null,null,null,null,null,null,null)
+B.aP8=new A.a5("The people in it stay in People.",null,null,null,null,null,null,null,null,null)
+B.aPc=new A.a5("How should it be signed?",null,null,null,null,null,null,null,null,null)
+B.aPd=new A.a5("Remove this card?",null,null,null,null,null,null,null,null,null)
+B.aPe=new A.a5("Add a gift inside",null,B.MH,null,null,null,null,null,null,null)
+B.aPg=new A.a5("Remove from People",null,B.ey,null,null,null,null,null,null,null)
+B.aPh=new A.a5("Someone not here? Add from contacts",null,B.MC,null,null,null,null,null,null,null)
+B.aPi=new A.a5("Sign in",null,B.be,null,null,null,null,null,null,null)
+B.aPj=new A.a5("Sign out?",null,null,null,null,null,null,null,null,null)
+B.aPl=new A.a5("This list could not be read",null,null,null,null,null,null,null,null,null)
+B.aPm=new A.a5("What they will see",null,B.be,null,null,null,null,null,null,null)
+B.aPn=new A.a5("My cards",null,B.be,null,null,null,null,null,null,null)
+B.aPo=new A.a5("This page is full of stickers",null,null,null,null,null,null,null,null,null)
+B.aPp=new A.a5("not asked",null,B.dD,null,null,null,null,null,null,null)
 B.aPq=new A.a5("CLOSE",null,null,null,null,null,null,null,null,null)
 B.aTx=new A.aCh(0,"system")
 B.ayP=new A.j(0.056,0.024)
@@ -133926,10 +133926,10 @@ B.Nk=new A.Lu(1,"zipCrypto")
 B.Nl=new A.Lu(2,"aes")
 B.bl=new A.BN(0,"forward")
 B.nh=new A.BN(1,"reverse")
-B.aOr=new A.a5("Paying is not switched on yet",null,B.MF,null,null,null,null,null,null,null)
+B.aOt=new A.a5("Paying is not switched on yet",null,B.MF,null,null,null,null,null,null,null)
 B.aIe=new A.w(!0,null,null,null,null,null,16,null,null,null,null,null,1.4,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.aP9=new A.a5("When it is, you will pay once, here, for all the cards.",null,B.aIe,null,null,null,null,null,null,null)
-B.a0t=s([B.aOr,B.ev,B.aP9],t.p)
+B.aPb=new A.a5("When it is, you will pay once, here, for all the cards.",null,B.aIe,null,null,null,null,null,null,null)
+B.a0t=s([B.aOt,B.ev,B.aPb],t.p)
 B.aRr=new A.BR(B.a0t,B.uI,null)
 B.aRs=new A.LX(0,"checkbox")
 B.aRt=new A.LX(1,"radio")
