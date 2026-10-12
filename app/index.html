@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <base href="/ala-site/app/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Make a card with your own photo and words, and collect it printed at an Ala kiosk near you.">
+  <!-- The app is for making cards; Google ranks the plain pages instead. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Ala">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Ala – Make It Yours</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; height: 100%; background: #F7F5F2; }
+    /* Shown at once, while the app itself downloads: the logo, breathing. */
+    #ala-loading { position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 18px; background: #F7F5F2;
+      font: 15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #66615B;
+      transition: opacity .3s; }
+    #ala-loading img { width: 150px; height: auto; animation: ala-breathe 1.6s ease-in-out infinite; }
+    @keyframes ala-breathe { 50% { opacity: .45; transform: scale(.97); } }
+  </style>
+</head>
+<body>
+  <div id="ala-loading"><img src="ala_script.png" alt="Ala"><span>Getting your cards ready…</span></div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var l = document.getElementById('ala-loading');
+      if (l) { l.style.opacity = 0; setTimeout(function () { l.remove(); }, 350); }
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
