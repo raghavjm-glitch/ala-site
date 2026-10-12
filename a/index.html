@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Your dates and address · Ala</title>
+<style>
+  :root { --red:#EF3340; --ink:#2B2A28; --mute:#66615B; --paper:#F7F5F2; --line:#E6E1DB; --ok:#1E7B4A; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system, "Segoe UI", Roboto, sans-serif; background:var(--paper); color:var(--ink); }
+  main { max-width:520px; margin:0 auto; padding:28px 18px 48px; }
+  .brand { font-size:14px; color:var(--mute); }
+  h1 { font-size:26px; margin:8px 0 6px; line-height:1.25; }
+  p { line-height:1.45; color:var(--mute); margin:6px 0; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; margin-top:16px; }
+  .card h2 { font-size:18px; margin:0 0 4px; color:var(--ink); }
+  label { display:block; font-size:14px; color:var(--mute); margin:12px 0 4px; }
+  input, select { width:100%; font-size:17px; padding:12px; border:1.5px solid var(--line); border-radius:12px; background:#fff; color:var(--ink); }
+  .row { display:flex; gap:8px; } .row > * { flex:1; }
+  .choice { display:flex; gap:10px; align-items:flex-start; padding:12px; border:1.5px solid var(--line); border-radius:12px; margin-top:8px; cursor:pointer; }
+  .choice input { width:auto; margin-top:3px; }
+  .choice.on { border-color:var(--red); background:#FFF5F6; }
+  .choice b { display:block; color:var(--ink); }
+  button { display:block; width:100%; border:0; border-radius:14px; padding:16px; font-size:18px; font-weight:700; margin-top:18px; background:var(--red); color:#fff; }
+  button.quiet { background:#fff; color:var(--ink); border:1.5px solid var(--line); font-weight:600; font-size:16px; }
+  .err { color:var(--red); } .ok { color:var(--ok); font-weight:700; }
+  .hidden { display:none; }
+  textarea { width:100%; font-size:16px; padding:12px; border:1.5px solid var(--line); border-radius:12px; min-height:90px; font-family:inherit; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">Ala · cards for every moment</div>
+  <div id="loading"><p>One moment…</p></div>
+
+  <form id="form" class="hidden" autocomplete="on">
+    <h1 id="title">Someone wants to remember your special days</h1>
+    <p id="lead">It takes a minute. Only your name is needed; everything else is up to you.</p>
+
+    <div class="card">
+      <h2>You</h2>
+      <label for="name">Your name</label>
+      <input id="name" name="name" autocomplete="name" required maxlength="60">
+    </div>
+
+    <div class="card">
+      <h2>Your days</h2>
+      <p>So they never miss them. Ala reminds them a few days before.</p>
+      <label>Birthday</label>
+      <div class="row">
+        <select id="bd"><option value="">Day</option></select>
+        <select id="bm"><option value="">Month</option></select>
+      </div>
+      <label>Anniversary (if you like)</label>
+      <div class="row">
+        <select id="ad"><option value="">Day</option></select>
+        <select id="am"><option value="">Month</option></select>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Your address (if you like)</h2>
+      <p>For a card that comes by post one day.</p>
+      <div id="savedAddr" class="hidden"><p class="ok">Your address is saved ✓</p>
+        <button type="button" class="quiet" id="changeAddr">Change my address</button></div>
+      <div id="addrFields">
+        <label for="l1">House, street</label><input id="l1" autocomplete="address-line1" maxlength="120">
+        <label for="l2">Area</label><input id="l2" autocomplete="address-line2" maxlength="120">
+        <label for="lm">Landmark</label><input id="lm" maxlength="80">
+        <div class="row">
+          <div><label for="city">City</label><input id="city" autocomplete="address-level2" maxlength="60"></div>
+          <div><label for="pin">Pincode</label><input id="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6"></div>
+        </div>
+        <label for="ph">Phone for the delivery person (if you like)</label><input id="ph" inputmode="tel" autocomplete="tel" maxlength="15">
+      </div>
+      <div id="who" class="hidden">
+        <label class="choice on" id="cPriv"><input type="radio" name="share" value="no" checked><span><b>Keep my address private</b><span id="privLine">Ala keeps it for delivery. They never see it.</span></span></label>
+        <label class="choice" id="cShare"><input type="radio" name="share" value="yes"><span><b id="shareTitle">Let them see my address</b>You can change this later from this same link.</span></label>
+      </div>
+    </div>
+
+    <p id="formErr" class="err"></p>
+    <button type="submit" id="save">Save</button>
+    <p style="font-size:13px;margin-top:12px">Saved only for the person who sent you this link and for Ala. Never sold, never shown to anyone else.</p>
+  </form>
+
+  <div id="done" class="hidden">
+    <h1>Thank you ✓</h1>
+    <p id="doneLine"></p>
+    <p>You can open this same link any time to change anything.</p>
+    <button class="quiet" id="again">Change something</button>
+  </div>
+
+  <div id="bad" class="hidden"><h1>This link does not work</h1><p id="badLine"></p></div>
+
+  <div class="card" id="fb">
+    <h2>How was this?</h2>
+    <p>Tell us anything. It helps us make it better.</p>
+    <textarea id="fbText" maxlength="2000" placeholder="Your thoughts"></textarea>
+    <button type="button" class="quiet" id="fbSend">Send</button>
+    <p id="fbDone" class="ok hidden">Thank you, we read every one.</p>
+  </div>
+</main>
+<script>
+// Addreso: a person adds their own dates and address for someone who asked.
+// The page lives on the website at /a/?c=<code> (and under the test site's
+// prefix); everything it needs comes from Ala's own functions on Google.
+const API = {
+  get: 'https://addreso-get-6ldlw25ksq-el.a.run.app',
+  answer: 'https://addreso-answer-6ldlw25ksq-el.a.run.app',
+  feedback: 'https://ala-feedback-6ldlw25ksq-el.a.run.app',
+};
+const $ = id => document.getElementById(id);
+const code = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^2-9A-Z]/g, '');
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+for (const [d, m] of [['bd','bm'],['ad','am']]) {
+  for (let i = 1; i <= 31; i++) $(d).add(new Option(i, i));
+  MONTHS.forEach((n, i) => $(m).add(new Option(n, i + 1)));
+}
+let from = 'them', hadAddress = false, changingAddress = false;
+const setDate = (d, m, v) => { const p = (v || '').split('-'); if (p.length >= 2) { $(d).value = +p[0]; $(m).value = +p[1]; } };
+const getDate = (d, m) => $(d).value && $(m).value ? `${$(d).value}-${$(m).value}` : '';
+const show = id => { for (const s of ['loading','form','done','bad']) $(s).classList.toggle('hidden', s !== id); };
+
+function choiceUi() {
+  const share = document.querySelector('input[name=share]:checked').value === 'yes';
+  $('cPriv').classList.toggle('on', !share); $('cShare').classList.toggle('on', share);
+}
+document.querySelectorAll('input[name=share]').forEach(r => r.onchange = choiceUi);
+function addrUi() {
+  const showFields = !hadAddress || changingAddress;
+  $('addrFields').classList.toggle('hidden', !showFields);
+  $('savedAddr').classList.toggle('hidden', showFields);
+  const typed = ['l1','pin'].some(id => $(id).value.trim());
+  $('who').classList.toggle('hidden', !(typed || hadAddress));
+}
+['l1','pin'].forEach(id => $(id).addEventListener('input', addrUi));
+$('changeAddr').onclick = () => { changingAddress = true; addrUi(); };
+
+async function load() {
+  if (code.length !== 10) { $('badLine').textContent = 'Please open the full link you were sent.'; return show('bad'); }
+  try {
+    const r = await fetch(`${API.get}?c=${code}`, { cache: 'no-store' });
+    const j = await r.json();
+    if (!r.ok) { $('badLine').textContent = j.error || 'Please ask for a new link.'; return show('bad'); }
+    from = j.from || 'them';
+    $('title').textContent = `${from} wants to remember your special days`;
+    $('privLine').textContent = `Ala keeps it for delivery. ${from} never sees it.`;
+    $('shareTitle').textContent = `Let ${from} see my address`;
+    if (j.answer) {
+      $('name').value = j.answer.name || '';
+      setDate('bd', 'bm', j.answer.birthday); setDate('ad', 'am', j.answer.anniversary);
+      hadAddress = !!j.answer.has_address;
+      document.querySelector(`input[name=share][value=${j.answer.share_address ? 'yes' : 'no'}]`).checked = true;
+      choiceUi();
+    }
+    addrUi(); show('form');
+  } catch (e) { $('badLine').textContent = 'Check the internet and open the link again.'; show('bad'); }
+}
+
+$('form').onsubmit = async e => {
+  e.preventDefault();
+  $('formErr').textContent = '';
+  const keep = hadAddress && !changingAddress;
+  const pin = $('pin').value.replace(/\D/g, '');
+  if (!keep && ($('l1').value.trim() || pin) && !($('l1').value.trim() && pin.length === 6)) {
+    $('formErr').textContent = 'Please add the house and street and a 6-digit pincode, or leave the address empty.'; return;
+  }
+  const share = document.querySelector('input[name=share]:checked').value === 'yes';
+  $('save').disabled = true; $('save').textContent = 'Saving…';
+  try {
+    const r = await fetch(API.answer, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        c: code, name: $('name').value, birthday: getDate('bd','bm'), anniversary: getDate('ad','am'),
+        keep_address: keep, share_address: share,
+        address: keep ? null : { line1: $('l1').value, line2: $('l2').value, landmark: $('lm').value, city: $('city').value, pincode: pin, phone: $('ph').value },
+      }),
+    });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || 'Could not save.');
+    const addr = keep ? hadAddress : !!($('l1').value.trim() && pin.length === 6);
+    $('doneLine').textContent = !addr ? `${from} will be reminded of your days.`
+      : share ? `${from} will be reminded of your days and can see your address.`
+      : `${from} will be reminded of your days. Your address is saved privately ✓ ready for when Ala delivers.`;
+    hadAddress = addr; changingAddress = false;
+    show('done');
+  } catch (err) { $('formErr').textContent = err.message || 'Could not save. Check the internet and try again.'; }
+  $('save').disabled = false; $('save').textContent = 'Save';
+};
+$('again').onclick = () => { addrUi(); show('form'); };
+
+$('fbSend').onclick = async () => {
+  const text = $('fbText').value.trim(); if (!text) return;
+  $('fbSend').disabled = true;
+  try {
+    await fetch(API.feedback, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ about: 'addreso-page', text }) });
+    $('fbText').classList.add('hidden'); $('fbSend').classList.add('hidden'); $('fbDone').classList.remove('hidden');
+  } catch (e) { $('fbSend').disabled = false; }
+};
+load();
+</script>
+</body>
+</html>
