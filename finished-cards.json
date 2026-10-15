@@ -1,5 +1,5 @@
 {
- "built": "2026-10-13",
+ "built": "2026-10-15",
  "rule": "filled preview, or no flat grey slot (<10% of pixels near #B9C5D0) and real darks (>=2.5% pixels with luminance <70); never a card named \"frame\"; plus hand_included, minus hand_excluded",
  "hand_excluded": [
   "71e5097c-89b0-4718-bf6d-8ca24c36a1e7",
