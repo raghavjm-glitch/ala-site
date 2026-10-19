@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Your dates and address · Ala</title>
+<title>Your address and dates · Ala</title>
 <style>
   :root { --red:#EF3340; --ink:#2B2A28; --mute:#66615B; --paper:#F7F5F2; --line:#E6E1DB; --ok:#1E7B4A; }
   * { box-sizing: border-box; }
@@ -17,14 +17,17 @@
   .card h2 { font-size:18px; margin:0 0 4px; color:var(--ink); }
   label { display:block; font-size:14px; color:var(--mute); margin:12px 0 4px; }
   input, select { width:100%; font-size:17px; padding:12px; border:1.5px solid var(--line); border-radius:12px; background:#fff; color:var(--ink); }
-  .row { display:flex; gap:8px; } .row > * { flex:1; }
+  .row { display:flex; gap:8px; } .row > * { flex:1; min-width:0; }
   .choice { display:flex; gap:10px; align-items:flex-start; padding:12px; border:1.5px solid var(--line); border-radius:12px; margin-top:8px; cursor:pointer; }
   .choice input { width:auto; margin-top:3px; }
   .choice.on { border-color:var(--red); background:#FFF5F6; }
   .choice b { display:block; color:var(--ink); }
   button { display:block; width:100%; border:0; border-radius:14px; padding:16px; font-size:18px; font-weight:700; margin-top:18px; background:var(--red); color:#fff; }
+  button { touch-action:manipulation; -webkit-tap-highlight-color:transparent; -webkit-appearance:none; appearance:none; cursor:pointer; min-height:52px; }
+  button:disabled { opacity:.6; cursor:default; }
   button.quiet { background:#fff; color:var(--ink); border:1.5px solid var(--line); font-weight:600; font-size:16px; }
   .err { color:var(--red); } .ok { color:var(--ok); font-weight:700; }
+  .hint { font-size:13px; margin:4px 0 0; }
   .hidden { display:none; }
   textarea { width:100%; font-size:16px; padding:12px; border:1.5px solid var(--line); border-radius:12px; min-height:90px; font-family:inherit; }
 </style>
@@ -34,65 +37,76 @@
   <div class="brand" style="text-align:center"><img src="data:image/png;base64,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" alt="Ala" style="height:44px"></div>
   <div id="loading"><p>One moment…</p></div>
 
+  <!-- One form for everything, with the standard autocomplete names, so the
+       phone's autofill puts the name, the whole address and the mobile in
+       with one tap (Chrome on Android, Safari on iPhone). -->
   <form id="form" class="hidden" autocomplete="on">
-    <h1 id="title">Someone wants to remember your special days</h1>
-    <p id="lead">It takes a minute. Only your name is needed; everything else is up to you.</p>
+    <h1 id="title">Someone would love to send you something now and then</h1>
+    <p id="lead">Please add your address, and your birthday and anniversary so they never miss them. It takes a minute.</p>
 
     <div class="card">
-      <h2>You</h2>
-      <label for="name">Your name</label>
-      <input id="name" name="name" autocomplete="name" required maxlength="60">
-    </div>
-
-    <div class="card">
-      <h2>Your days</h2>
-      <p>So they never miss them. Ala reminds them a few days before.</p>
-      <label>Birthday</label>
-      <div class="row">
-        <select id="bd"><option value="">Day</option></select>
-        <select id="bm"><option value="">Month</option></select>
+      <h2>Your address</h2>
+      <p id="addrLead">So a card or a little something can reach you.</p>
+      <p id="forLine" class="hidden" style="color:var(--ink)"></p>
+      <div id="nameBox">
+        <label for="name">Your name</label>
+        <input id="name" name="name" autocomplete="name" required maxlength="60">
       </div>
-      <label>Anniversary (if you like)</label>
-      <div class="row">
-        <select id="ad"><option value="">Day</option></select>
-        <select id="am"><option value="">Month</option></select>
+      <div id="mobileBox" class="hidden">
+        <label for="mobile">Your mobile number</label>
+        <input id="mobile" name="tel" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="10-digit number">
+        <p class="hint" id="mobileHint">So they know it is you.</p>
       </div>
-    </div>
-
-    <div class="card">
-      <h2>Your address (if you like)</h2>
-      <p>For a card that comes by post one day.</p>
       <div id="savedAddr" class="hidden"><p class="ok">Your address is saved ✓</p>
         <button type="button" class="quiet" id="changeAddr">Change my address</button></div>
       <div id="addrFields">
-        <label for="l1">House, street</label><input id="l1" autocomplete="address-line1" maxlength="120">
-        <label for="l2">Area</label><input id="l2" autocomplete="address-line2" maxlength="120">
-        <label for="lm">Landmark</label><input id="lm" maxlength="80">
+        <label for="l1">House, street</label><input id="l1" name="address-line1" autocomplete="address-line1" maxlength="120">
+        <label for="l2">Area</label><input id="l2" name="address-line2" autocomplete="address-line2" maxlength="120">
+        <label for="lm">Landmark</label><input id="lm" name="address-line3" autocomplete="address-line3" maxlength="80">
+        <label for="pin">Pincode</label><input id="pin" name="postal-code" inputmode="numeric" autocomplete="postal-code" maxlength="6">
         <div class="row">
-          <div><label for="city">City</label><input id="city" autocomplete="address-level2" maxlength="60"></div>
-          <div><label for="pin">Pincode</label><input id="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6"></div>
+          <div><label for="city">City</label><input id="city" name="address-level2" autocomplete="address-level2" maxlength="60"></div>
+          <div><label for="state">State</label><input id="state" name="address-level1" autocomplete="address-level1" maxlength="40"></div>
         </div>
-        <label for="ph">Phone for the delivery person (if you like)</label><input id="ph" inputmode="tel" autocomplete="tel" maxlength="15">
+        <div id="phBox">
+          <label for="ph">Phone for the delivery person (if you like)</label><input id="ph" name="tel" type="tel" inputmode="tel" autocomplete="tel" maxlength="15">
+        </div>
       </div>
       <div id="who" class="hidden">
         <label class="choice on" id="cPriv"><input type="radio" name="share" value="no" checked><span><b>Keep my address private</b><span id="privLine">Ala keeps it for delivery. They never see it.</span></span></label>
-        <label class="choice" id="cShare"><input type="radio" name="share" value="yes"><span><b id="shareTitle">Let them see my address</b>You can change this later from this same link.</span></label>
+        <label class="choice" id="cShare"><input type="radio" name="share" value="yes"><span><b id="shareTitle">Let them see my address</b><span id="shareLine">You can change this later from this same link.</span></span></label>
       </div>
     </div>
 
-    <p id="formErr" class="err"></p>
+    <div class="card">
+      <h2>Your special days</h2>
+      <p>So they never miss them. Ala reminds them a few days before.</p>
+      <label>Birthday</label>
+      <div class="row">
+        <select id="bd" name="bday-day" autocomplete="bday-day"><option value="">Day</option></select>
+        <select id="bm" name="bday-month" autocomplete="bday-month"><option value="">Month</option></select>
+      </div>
+      <label>Anniversary (if you like)</label>
+      <div class="row">
+        <select id="ad" name="anniversary-day" autocomplete="off"><option value="">Day</option></select>
+        <select id="am" name="anniversary-month" autocomplete="off"><option value="">Month</option></select>
+      </div>
+    </div>
+
     <button type="submit" id="save">Save</button>
-    <p style="font-size:13px;margin-top:12px">Saved only for the person who sent you this link and for Ala. Never sold, never shown to anyone else.</p>
+    <!-- Under the button, so a message never pushes the button down. -->
+    <p id="formErr" class="err" role="alert" aria-live="polite"></p>
+    <p id="privacyNote" style="font-size:13px;margin-top:12px">Saved only for the person who sent you this link and for Ala. Never sold, never shown to anyone else.</p>
   </form>
 
   <div id="done" class="hidden">
     <h1>Thank you ✓</h1>
     <p id="doneLine"></p>
-    <p>You can open this same link any time to change anything.</p>
+    <p id="doneMore">You can open this same link any time to change anything.</p>
     <button class="quiet" id="again">Change something</button>
   </div>
 
-  <div id="bad" class="hidden"><h1>This link does not work</h1><p id="badLine"></p></div>
+  <div id="bad" class="hidden"><h1 id="badTitle">This link does not work</h1><p id="badLine"></p></div>
 
   <div class="card" id="fb">
     <h2>How was this?</h2>
@@ -103,25 +117,86 @@
   </div>
 </main>
 <script>
-// Addreso: a person adds their own dates and address for someone who asked.
-// The page lives on the website at /a/?c=<code> (and under the test site's
-// prefix); everything it needs comes from Ala's own functions on Google.
+// Addreso: a person adds their own address and dates for someone who asked.
+// The page lives on the website at /a/?c=<code> for one person, and at
+// /a/?g=<code> for a link shared in a WhatsApp group, where each person fills
+// their own copy with their name and mobile (the sender's app matches the
+// answers to People by that number). Everything it needs comes from Ala's own
+// functions on Google; nothing else is loaded.
 const API = {
   get: 'https://addreso-get-6ldlw25ksq-el.a.run.app',
   answer: 'https://addreso-answer-6ldlw25ksq-el.a.run.app',
   feedback: 'https://ala-feedback-6ldlw25ksq-el.a.run.app',
 };
 const $ = id => document.getElementById(id);
-const code = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^2-9A-Z]/g, '');
+const qs = new URLSearchParams(location.search);
+const tidy = v => (v || '').toUpperCase().replace(/[^2-9A-Z]/g, '');
+const code = tidy(qs.get('c'));
+const gcode = code ? '' : tidy(qs.get('g'));
+const GROUP = !code && qs.has('g');
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 for (const [d, m] of [['bd','bm'],['ad','am']]) {
   for (let i = 1; i <= 31; i++) $(d).add(new Option(i, i));
   MONTHS.forEach((n, i) => $(m).add(new Option(n, i + 1)));
 }
-let from = 'them', hadAddress = false, changingAddress = false;
+// Before the backend answers, a group link may carry the sender's first name
+// in &f= (shown only as text, only for the "not ready" line).
+let from = 'them', hadAddress = false, changingAddress = false, toName = '', sending = false;
 const setDate = (d, m, v) => { const p = (v || '').split('-'); if (p.length >= 2) { $(d).value = +p[0]; $(m).value = +p[1]; } };
 const getDate = (d, m) => $(d).value && $(m).value ? `${$(d).value}-${$(m).value}` : '';
 const show = id => { for (const s of ['loading','form','done','bad']) $(s).classList.toggle('hidden', s !== id); $('fb').classList.toggle('hidden', id === 'bad' || id === 'loading'); };
+
+// An Indian mobile as 10 digits, or '' (the same rule as the backend's).
+function normPhone(v) {
+  let d = String(v == null ? '' : v).trim().replace(/[\s\-().]/g, '');
+  if (!/^\+?\d+$/.test(d)) return '';
+  if (d.startsWith('+91')) d = d.slice(3);
+  else if (d.startsWith('0091')) d = d.slice(4);
+  else if (d.length === 12 && d.startsWith('91')) d = d.slice(2);
+  else if (d.startsWith('+')) return '';
+  if (d.length === 11 && d.startsWith('0')) d = d.slice(1);
+  return /^[6-9]\d{9}$/.test(d) ? d : '';
+}
+
+// Pincode -> state (and the city for the big cities), from this small table
+// inside the page: no outside service sees what anyone types. The state comes
+// from the first three digits, else the first two; prefixes shared by two
+// states are left out, so nothing wrong is ever filled in.
+const S = { AP:'Andhra Pradesh', AR:'Arunachal Pradesh', AS:'Assam', BR:'Bihar', CG:'Chhattisgarh', CH:'Chandigarh', DL:'Delhi', GA:'Goa', GJ:'Gujarat', HP:'Himachal Pradesh', HR:'Haryana', JH:'Jharkhand', JK:'Jammu and Kashmir', KA:'Karnataka', KL:'Kerala', LA:'Ladakh', MH:'Maharashtra', ML:'Meghalaya', MN:'Manipur', MP:'Madhya Pradesh', MZ:'Mizoram', NL:'Nagaland', OD:'Odisha', PB:'Punjab', RJ:'Rajasthan', SK:'Sikkim', TN:'Tamil Nadu', TR:'Tripura', TS:'Telangana', UK:'Uttarakhand', UP:'Uttar Pradesh', WB:'West Bengal', AN:'Andaman and Nicobar Islands', LD:'Lakshadweep', PY:'Puducherry' };
+const PIN2 = { 11:'DL', 12:'HR', 13:'HR', 14:'PB', 15:'PB', 16:'PB', 17:'HP', 18:'JK', 19:'JK', 20:'UP', 21:'UP', 22:'UP', 23:'UP', 24:'UP', 25:'UP', 26:'UP', 27:'UP', 28:'UP',
+  30:'RJ', 31:'RJ', 32:'RJ', 33:'RJ', 34:'RJ', 36:'GJ', 37:'GJ', 38:'GJ', 39:'GJ', 40:'MH', 41:'MH', 42:'MH', 43:'MH', 44:'MH', 45:'MP', 46:'MP', 47:'MP', 48:'MP', 49:'CG',
+  50:'TS', 51:'AP', 52:'AP', 53:'AP', 56:'KA', 57:'KA', 58:'KA', 59:'KA', 60:'TN', 61:'TN', 62:'TN', 63:'TN', 64:'TN', 67:'KL', 68:'KL', 69:'KL',
+  70:'WB', 71:'WB', 72:'WB', 73:'WB', 74:'WB', 75:'OD', 76:'OD', 77:'OD', 78:'AS', 80:'BR', 81:'BR', 82:'BR', 83:'JH', 84:'BR', 85:'BR' };
+// Three-digit exceptions; '' = shared by two states, leave it to the person.
+const PIN3 = { 160:'', 194:'LA', 244:'', 246:'UK', 247:'', 248:'UK', 249:'UK', 262:'', 263:'UK', 362:'', 396:'', 403:'GA', 605:'', 609:'',
+  737:'SK', 744:'AN', 790:'AR', 791:'AR', 792:'AR', 793:'ML', 794:'ML', 795:'MN', 796:'MZ', 797:'NL', 798:'NL', 799:'TR',
+  813:'', 814:'JH', 815:'JH', 816:'JH', 821:'BR', 822:'JH', 823:'BR', 824:'BR', 825:'JH', 826:'JH', 827:'JH', 828:'JH', 829:'JH' };
+// Single pincodes and ranges that sit inside another state's prefix.
+const PINX = [[682551,682559,'LD'],[673310,673310,'PY'],[533464,533464,'PY']];
+// The big cities, by pincode range (first, last, city).
+const CITIES = [[110001,110097,'Delhi'],[400001,400104,'Mumbai'],[560001,560300,'Bengaluru'],
+  [600001,600130,'Chennai'],[700001,700160,'Kolkata'],[500001,500100,'Hyderabad'],[411001,411062,'Pune'],[380001,380061,'Ahmedabad'],
+  [302001,302039,'Jaipur'],[226001,226031,'Lucknow'],[122001,122018,'Gurugram'],[395001,395023,'Surat'],[452001,452020,'Indore']];
+function pinPlace(pin) {
+  if (!/^[1-8]\d{5}$/.test(pin)) return {};
+  const p3 = pin.slice(0, 3), n = +pin;
+  const x = PINX.find(([a, b]) => n >= a && n <= b);
+  const st = x ? x[2] : p3 in PIN3 ? PIN3[p3] : PIN2[pin.slice(0, 2)] || '';
+  const c = CITIES.find(([a, b]) => n >= a && n <= b);
+  return { state: S[st] || '', city: c ? c[2] : '' };
+}
+// Fill only what is empty or what we filled ourselves; never what they typed.
+function pinFill() {
+  const got = pinPlace($('pin').value.replace(/\D/g, ''));
+  for (const k of ['city', 'state']) {
+    const el = $(k);
+    if (el.value.trim() && el.dataset.auto !== el.value) continue;
+    el.value = got[k] || (el.dataset.auto ? '' : el.value);
+    el.dataset.auto = got[k] || '';
+  }
+}
+$('pin').addEventListener('input', pinFill);
+$('pin').addEventListener('change', pinFill);
 
 function choiceUi() {
   const share = document.querySelector('input[name=share]:checked').value === 'yes';
@@ -135,19 +210,38 @@ function addrUi() {
   const typed = ['l1','pin'].some(id => $(id).value.trim());
   $('who').classList.toggle('hidden', !(typed || hadAddress));
 }
-['l1','pin'].forEach(id => $(id).addEventListener('input', addrUi));
+['l1','pin'].forEach(id => { $(id).addEventListener('input', addrUi); $(id).addEventListener('change', addrUi); });
 $('changeAddr').onclick = () => { changingAddress = true; addrUi(); };
 
+function greet() {
+  $('title').textContent = `${from} would love to send you something now and then`;
+  $('lead').textContent = 'Please add your address, and your birthday and anniversary so they never miss them. It takes a minute.';
+  $('privLine').textContent = `Ala keeps it for delivery. ${from} never sees it.`;
+  $('shareTitle').textContent = `Let ${from} see my address`;
+}
+
 async function load() {
+  if (GROUP) return loadGroup();
   if (code.length !== 10) { $('badLine').textContent = 'Please open the full link you were sent.'; return show('bad'); }
   try {
     const r = await fetch(`${API.get}?c=${code}`, { cache: 'no-store' });
     const j = await r.json();
     if (!r.ok) { $('badLine').textContent = j.error || 'Please open the full link you were sent.'; return show('bad'); }
     from = j.from || 'them';
-    $('title').textContent = `${from} wants to remember your special days`;
-    $('privLine').textContent = `Ala keeps it for delivery. ${from} never sees it.`;
-    $('shareTitle').textContent = `Let ${from} see my address`;
+    greet();
+    // One person: the sender already has their name and number. If the
+    // backend holds the name the sender saved (to_name, and the number only
+    // masked in to_phone), the page shows it and does not ask again.
+    toName = String(j.to_name || '').trim().slice(0, 60);
+    const toPhone = String(j.to_phone || '').trim().slice(0, 20);
+    $('title').textContent = toName ? `Hi ${toName} 👋` : 'Hi 👋';
+    $('lead').textContent = `${from} would love to send you something now and then. Please add your address, and your birthday and anniversary so they never miss them. It takes a minute.`;
+    if (toName) {
+      $('forLine').textContent = `This is for ${toName}${toPhone ? ' · ' + toPhone : ''}`;
+      $('forLine').classList.remove('hidden');
+      $('nameBox').classList.add('hidden');
+      $('name').required = false;
+    }
     if (j.answer) {
       $('name').value = j.answer.name || '';
       setDate('bd', 'bm', j.answer.birthday); setDate('ad', 'am', j.answer.anniversary);
@@ -159,48 +253,120 @@ async function load() {
   } catch (e) { $('badLine').textContent = 'Check the internet and open the link again.'; show('bad'); }
 }
 
+// A group link. If the backend does not know group links yet (it answers 404
+// or 400 without saying the link is unknown), the sender's app is newer than
+// the backend: a kind "not ready yet", never a raw error.
+async function loadGroup() {
+  const hinted = (qs.get('f') || '').replace(/[\u0000-\u001f<>]/g, '').trim().slice(0, 40);
+  const notReady = () => {
+    $('badTitle').textContent = 'Almost ready';
+    $('badLine').textContent = `This link isn't ready yet. Please ask ${hinted || 'the person who sent it'} again in a little while.`;
+    show('bad');
+  };
+  if (gcode.length !== 10) { $('badLine').textContent = 'Please open the full link you were sent.'; return show('bad'); }
+  let r, j;
+  try {
+    r = await fetch(`${API.get}?g=${gcode}`, { cache: 'no-store' });
+    j = await r.json().catch(() => ({}));
+  } catch (e) { $('badLine').textContent = 'Check the internet and open the link again.'; return show('bad'); }
+  if (!r.ok) {
+    if (j && j.group_unknown && j.error) { $('badLine').textContent = j.error; return show('bad'); }
+    return notReady();
+  }
+  if (!j || j.group !== true) return notReady();
+  from = j.from_name || j.from || hinted || 'them';
+  greet();
+  $('mobileBox').classList.remove('hidden');
+  $('mobile').required = true;
+  $('mobileHint').textContent = `So ${from} knows it is you.`;
+  $('phBox').classList.add('hidden'); // the delivery person uses the mobile above
+  $('shareLine').textContent = 'You can change this later: open the link again with the same mobile number.';
+  $('privacyNote').textContent = `Your name, number and days go only to ${from} and Ala. Never sold, never shown to anyone else in the group.`;
+  $('doneMore').textContent = 'If anything changes, open the link again and fill it with the same mobile number.';
+  $('again').textContent = 'Someone else at home? Add them too';
+  addrUi(); show('form');
+}
+
+function dateErr() {
+  for (const [d, m, what] of [['bd','bm','birthday'],['ad','am','anniversary']]) {
+    if ($(d).value && $(m).value && +$(d).value > new Date(2024, +$(m).value, 0).getDate()) {
+      return `That ${what} day does not exist in that month.`;
+    }
+  }
+  return '';
+}
+const addressNow = (pin, phone) => ({ line1: $('l1').value, line2: $('l2').value, landmark: $('lm').value, city: $('city').value, state: $('state').value, pincode: pin, phone });
+
+// One tap saves: a second tap (or Enter) while it is sending does nothing,
+// the button says "Sending…" at once, and a slow network gives up after 20 s
+// with a message instead of a button stuck forever.
+const say = t => { $('formErr').textContent = t; };
 $('form').onsubmit = async e => {
   e.preventDefault();
-  $('formErr').textContent = '';
-  const keep = hadAddress && !changingAddress;
+  if (sending) return;
+  say('');
+  const keep = !GROUP && hadAddress && !changingAddress;
   const pin = $('pin').value.replace(/\D/g, '');
+  const mobile = GROUP ? normPhone($('mobile').value) : '';
+  if (GROUP && !$('name').value.trim()) { $('formErr').textContent = 'Please add your name.'; return; }
+  if (GROUP && !mobile) { $('formErr').textContent = 'Please add your 10-digit mobile number.'; return; }
   if (!keep && ($('l1').value.trim() || pin) && !($('l1').value.trim() && pin.length === 6)) {
     $('formErr').textContent = 'Please add the house and street and a 6-digit pincode, or leave the address empty.'; return;
   }
-  for (const [d, m, what] of [['bd','bm','birthday'],['ad','am','anniversary']]) {
-    if ($(d).value && $(m).value && +$(d).value > new Date(2024, +$(m).value, 0).getDate()) {
-      $('formErr').textContent = `That ${what} day does not exist in that month.`; return;
-    }
-  }
+  const bad = dateErr();
+  if (bad) { $('formErr').textContent = bad; return; }
   const share = document.querySelector('input[name=share]:checked').value === 'yes';
-  $('save').disabled = true; $('save').textContent = 'Saving…';
+  const body = GROUP ? {
+    g: gcode, name: $('name').value, phone: mobile, birthday: getDate('bd','bm'), anniversary: getDate('ad','am'),
+    keep_address: false, share_address: share, address: addressNow(pin, mobile),
+  } : {
+    c: code, name: toName || $('name').value, birthday: getDate('bd','bm'), anniversary: getDate('ad','am'),
+    keep_address: keep, share_address: share,
+    address: keep ? null : addressNow(pin, $('ph').value),
+  };
+  sending = true; $('save').disabled = true; $('save').textContent = 'Sending…';
+  const stop = new AbortController();
+  const timer = setTimeout(() => stop.abort(), 20000);
   try {
     const r = await fetch(API.answer, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        c: code, name: $('name').value, birthday: getDate('bd','bm'), anniversary: getDate('ad','am'),
-        keep_address: keep, share_address: share,
-        address: keep ? null : { line1: $('l1').value, line2: $('l2').value, landmark: $('lm').value, city: $('city').value, pincode: pin, phone: $('ph').value },
-      }),
+      body: JSON.stringify(body), signal: stop.signal,
     });
     const j = await r.json().catch(() => ({}));
-    if (!r.ok) throw new Error(j.error || 'Could not save.');
+    if (!r.ok) throw new Error(j.error || 'Could not save. Please try again.');
     const addr = keep ? hadAddress : !!($('l1').value.trim() && pin.length === 6);
     $('doneLine').textContent = !addr ? `${from} will be reminded of your days.`
       : share ? `${from} will be reminded of your days and can see your address.`
       : `${from} will be reminded of your days. Your address is saved privately ✓ ready for when Ala delivers.`;
-    hadAddress = addr; changingAddress = false;
+    hadAddress = GROUP ? false : addr; changingAddress = false;
+    // Close the phone's keyboard and start the thank-you at the top, so it is
+    // the first thing seen (not the feedback box where the button was).
+    if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
     show('done');
-  } catch (err) { $('formErr').textContent = err.message || 'Could not save. Check the internet and try again.'; }
-  $('save').disabled = false; $('save').textContent = 'Save';
+    window.scrollTo(0, 0);
+  } catch (err) {
+    say(err.name === 'AbortError' || err instanceof TypeError
+      ? 'Could not save. Check the internet and tap Save again.'
+      : err.message || 'Could not save. Please try again.');
+  } finally {
+    clearTimeout(timer);
+    sending = false; $('save').disabled = false; $('save').textContent = 'Save';
+  }
 };
-$('again').onclick = () => { addrUi(); show('form'); };
+$('again').onclick = () => {
+  if (GROUP) { // a fresh copy for the next person
+    $('form').reset();
+    for (const k of ['city', 'state']) $(k).dataset.auto = '';
+    choiceUi();
+  }
+  addrUi(); show('form');
+};
 
 $('fbSend').onclick = async () => {
   const text = $('fbText').value.trim(); if (!text) return;
   $('fbSend').disabled = true;
   try {
-    await fetch(API.feedback, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ about: 'addreso-page', text }) });
+    await fetch(API.feedback, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ about: GROUP ? 'addreso-group-page' : 'addreso-page', text }) });
     $('fbText').classList.add('hidden'); $('fbSend').classList.add('hidden'); $('fbDone').classList.remove('hidden');
   } catch (e) { $('fbSend').disabled = false; }
 };
