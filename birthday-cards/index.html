@@ -87,11 +87,12 @@ h2{font-family:var(--display);font-weight:400;color:var(--red);font-size:26px;li
 .kiosks li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
 .kiosks b{display:block;font-size:15px}
 .kiosks small{display:block;color:var(--mute);font-size:14px;line-height:1.4;margin:2px 0 8px}
-.kiosks a{font-size:14px;font-weight:700;color:var(--red);text-decoration:none;margin-right:14px}
+.kiosks a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;margin:0 8px 0 -14px;font-size:14px;font-weight:700;color:var(--red);text-decoration:none}
 .facts{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;max-width:680px;font-size:15px}
 .facts p{margin:0 0 8px}
 .facts a{font-weight:700;color:var(--red);text-decoration:none}
 .note{color:var(--mute);font-size:14px}
+.note a{display:inline-flex;align-items:center;min-height:44px}
 .legaltext{max-width:720px}
 .legaltext h2.legal{font-family:inherit;color:var(--ink);font-size:17px;font-weight:700;margin:26px 0 8px}
 .legaltext p,.legaltext li{font-size:15px;line-height:1.55}
@@ -104,12 +105,12 @@ h2{font-family:var(--display);font-weight:400;color:var(--red);font-size:26px;li
 .store small{display:block;font-size:11px;font-weight:400;opacity:.85}
 .soonbadge{font-size:13px;color:var(--mute)}
 footer{margin-top:56px;background:#fff;box-shadow:0 -.5px 0 var(--line);padding:24px 0 32px;font-size:14px;color:var(--mute)}
-footer a{color:var(--mute);margin-right:16px;display:inline-block;margin-bottom:6px;text-decoration:none}
+footer a{color:var(--mute);display:inline-flex;align-items:center;min-height:44px;padding:0 12px 0 0;margin-right:6px;text-decoration:none}
 footer a:hover{color:var(--red)}
 footer .sign{font-family:var(--display);color:var(--red);font-size:20px;margin:0 0 10px}
 @media (max-width:640px){header .side{visibility:hidden}.btn{display:flex;width:100%}}
 </style>
-<script>(function(){try{var v="0f186d529cf7";fetch("/ala-site/version.txt"+"?"+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=t.trim();if(!t||t===v)return;var k="ala-build-"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}fetch(location.href,{cache:"reload"}).then(function(){location.reload()})}).catch(function(){})}catch(e){}})()</script>
+<script>(function(){try{var v="2a091a6ae488";fetch("/ala-site/version.txt"+"?"+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(function(t){t=t.trim();if(!t||t===v)return;var k="ala-build-"+t;try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,"1")}catch(e){}fetch(location.href,{cache:"reload"}).then(function(){location.reload()})}).catch(function(){})}catch(e){}})()</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Personalised birthday cards with their photo", "description": "Birthday cards with their photo and your words, printed in about five minutes at an Ala kiosk. Over 500 designs, no minimum order.", "url": "https://www.alacard.io/birthday-cards/", "isPartOf": {"@type": "WebSite", "name": "Ala", "url": "https://www.alacard.io/"}}</script>
 
 </head>
@@ -124,7 +125,7 @@ footer .sign{font-family:var(--display);color:var(--red);font-size:20px;margin:0
 <p><a href="/ala-site/diwali-cards/">Diwali cards</a><a href="/ala-site/birthday-cards/">Birthday cards</a><a href="/ala-site/anniversary-cards/">Anniversary cards</a><a href="/ala-site/karva-chauth-cards/">Karva Chauth cards</a><a href="/ala-site/bhai-dooj-cards/">Bhai Dooj cards</a><a href="/ala-site/kiosks/">Ala kiosks</a></p>
 <p><a href="/ala-site/contact-us/">Contact</a><a href="https://www.alacard.io/privacy">Privacy</a><a href="https://www.alacard.io/terms-and-conditions">Terms</a></p>
 <p class="sign">Make it yours</p>
-<p>&copy; 2026 Sparkin Labs &middot; Ala, personalised cards printed at a kiosk near you.</p>
+<p>&copy; 2026 M/S KADO &middot; Ala, personalised cards printed at a kiosk near you.</p>
 </div></footer>
 </body>
 </html>
