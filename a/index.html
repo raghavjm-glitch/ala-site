@@ -142,6 +142,10 @@ for (const [d, m] of [['bd','bm'],['ad','am']]) {
 // Before the backend answers, a group link may carry the sender's first name
 // in &f= (shown only as text, only for the "not ready" line).
 let from = 'them', hadAddress = false, changingAddress = false, toName = '', sending = false;
+// Raghav, 21 Oct 2026: a one-person link for someone saved by name only (no
+// number) asks for their mobile, outside the private address, so it reaches
+// the sender. Optional; the delivery person uses it too.
+let askMobile = false;
 const setDate = (d, m, v) => { const p = (v || '').split('-'); if (p.length >= 2) { $(d).value = +p[0]; $(m).value = +p[1]; } };
 const getDate = (d, m) => $(d).value && $(m).value ? `${$(d).value}-${$(m).value}` : '';
 const show = id => { for (const s of ['loading','form','done','bad']) $(s).classList.toggle('hidden', s !== id); $('fb').classList.toggle('hidden', id === 'bad' || id === 'loading'); };
@@ -236,6 +240,12 @@ async function load() {
     const toPhone = String(j.to_phone || '').trim().slice(0, 20);
     $('title').textContent = toName ? `Hi ${toName} 👋` : 'Hi 👋';
     $('lead').textContent = `${from} would love to send you something now and then. Please add your address, and your birthday and anniversary so they never miss them. It takes a minute.`;
+    askMobile = !toPhone;
+    if (askMobile) {
+      $('mobileBox').classList.remove('hidden');
+      $('mobileHint').classList.add('hidden');
+      $('phBox').classList.add('hidden'); // the delivery person uses the mobile above
+    }
     if (toName) {
       $('forLine').textContent = `This is for ${toName}${toPhone ? ' · ' + toPhone : ''}`;
       $('forLine').classList.remove('hidden');
@@ -246,6 +256,7 @@ async function load() {
       $('name').value = j.answer.name || '';
       setDate('bd', 'bm', j.answer.birthday); setDate('ad', 'am', j.answer.anniversary);
       hadAddress = !!j.answer.has_address;
+      if (askMobile && j.answer.has_phone) $('mobile').placeholder = 'Saved ✓ type a new one to change it';
       document.querySelector(`input[name=share][value=${j.answer.share_address ? 'yes' : 'no'}]`).checked = true;
       choiceUi();
     }
@@ -307,7 +318,8 @@ $('form').onsubmit = async e => {
   say('');
   const keep = !GROUP && hadAddress && !changingAddress;
   const pin = $('pin').value.replace(/\D/g, '');
-  const mobile = GROUP ? normPhone($('mobile').value) : '';
+  const mobile = GROUP || askMobile ? normPhone($('mobile').value) : '';
+  if (askMobile && $('mobile').value.trim() && !mobile) { say('Please check your mobile number: 10 digits, like 98765 43210.'); return; }
   if (GROUP && !$('name').value.trim()) { $('formErr').textContent = 'Please add your name.'; return; }
   if (GROUP && !mobile) { $('formErr').textContent = 'Please add your 10-digit mobile number.'; return; }
   if (!keep && ($('l1').value.trim() || pin) && !($('l1').value.trim() && pin.length === 6)) {
@@ -322,7 +334,8 @@ $('form').onsubmit = async e => {
   } : {
     c: code, name: toName || $('name').value, birthday: getDate('bd','bm'), anniversary: getDate('ad','am'),
     keep_address: keep, share_address: share,
-    address: keep ? null : addressNow(pin, $('ph').value),
+    address: keep ? null : addressNow(pin, askMobile ? mobile : $('ph').value),
+    ...(mobile ? { phone: mobile } : {}),
   };
   sending = true; $('save').disabled = true; $('save').textContent = 'Sending…';
   const stop = new AbortController();
